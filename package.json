@@ -1,0 +1,13 @@
+{
+  "name": "ftx-boards",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "FTX Hybrid group accountability boards — nightly crawler + static site",
+  "scripts": {
+    "crawl": "node scripts/crawl.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}
