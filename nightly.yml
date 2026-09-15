@@ -1,0 +1,52 @@
+name: Nightly FTX board refresh
+
+on:
+  schedule:
+    - cron: '30 0 * * *'   # 00:30 UTC = 7:30 PM CDT (adjust for standard time if needed)
+  workflow_dispatch: {}      # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps + browser
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+
+      - name: Crawl Exercise.com and refresh data
+        env:
+          EXERCISE_EMAIL: ${{ secrets.EXERCISE_EMAIL }}
+          EXERCISE_PASSWORD: ${{ secrets.EXERCISE_PASSWORD }}
+        run: npm run crawl
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "ftx-board-bot"
+          git config user.email "bot@ftxhybrid.local"
+          git add site/data/*.json
+          git commit -m "nightly data refresh" || echo "no changes"
+          git push || echo "nothing to push"
+
+      - name: Upload site to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
