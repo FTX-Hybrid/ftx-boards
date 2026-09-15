@@ -54,6 +54,8 @@
   .item.lead .rk{color:var(--accent)}
   .nm{font-weight:700; font-size:15.5px; display:flex; align-items:center; gap:9px; flex-wrap:wrap}
   .pill{font-size:10px; letter-spacing:.06em; text-transform:uppercase; font-weight:800; padding:2px 8px; border-radius:5px}
+  .pill.strk{background:#2a1607; color:#ff9d3c; letter-spacing:.02em}
+  .splitrow .dt{opacity:.55; font-weight:600}
   .p-strong{color:var(--good); border:1px solid color-mix(in oklab,var(--good) 45%,transparent)}
   .p-solid{color:var(--blue); border:1px solid color-mix(in oklab,var(--blue) 45%,transparent)}
   .p-slip{color:var(--warn); border:1px solid color-mix(in oklab,var(--warn) 45%,transparent)}
@@ -114,7 +116,9 @@ function statusOf(w){ if(w===0) return ['Not logging','p-ghost']; if(w<10) retur
 const swEl = document.getElementById('switch'), panel = document.getElementById('panel');
 ORDER.forEach((g,i)=>{ const b=document.createElement('button'); b.className='sw'; b.type='button'; b.setAttribute('role','tab'); b.textContent=label(g); b.setAttribute('aria-selected',i===0?'true':'false'); b.onclick=()=>show(g); swEl.appendChild(b); });
 
-async function load(g){ if(cache[g]) return cache[g]; const r=await fetch('data/'+g+'.json',{cache:'no-store'}); cache[g]=await r.json(); return cache[g]; }
+async function load(g){ if(cache[g]) return cache[g]; if(window.__DATA__&&window.__DATA__[g]){ cache[g]=window.__DATA__[g]; return cache[g]; } const r=await fetch('data/'+g+'.json',{cache:'no-store'}); cache[g]=await r.json(); return cache[g]; }
+// Single-group mode: ?g=athena shows only that group (no switcher) — the per-group link.
+const only = (new URLSearchParams(location.search).get('g')||'').toUpperCase().replace(/[^A-Z]/g,'');
 async function show(g){
   const meta=META[g]; document.documentElement.style.setProperty('--accent', meta.accent);
   [...swEl.children].forEach((b,i)=>{ const on=ORDER[i]===g; b.setAttribute('aria-selected',on?'true':'false'); b.style.background=on?(meta.accentSolid||meta.accent):''; });
@@ -136,9 +140,13 @@ function render(g, meta, d){
   if(top) h+=`<div class="callout"><b class="em">${esc(top.n)}</b><span>tops ${esc(NM)} — <b>${top.w}</b> workouts this month${top.c?` · <b>${top.c}</b> career`:''}.</span></div>`;
   h+=`<div class="sechead"><h2>${esc(NM)} Board</h2><div class="cap">ranked · last 30 days</div></div><p class="tap">Tap an athlete for detail ▾</p><div class="board">`;
   active.forEach((m,i)=>{ const [lbl,cls]=statusOf(m.w); const lead=i===0?' lead':'';
-    h+=`<details class="item${lead}"><summary class="row"><div class="rk">${i+1}</div><div class="nm">${esc(m.n)} <span class="pill ${cls}">${lbl}</span></div><div class="wk tnum">${m.w} <small>WK</small></div><div class="career tnum">${m.c?`<b>${m.c}</b> career`:''}</div><span class="chev">▾</span></summary><div class="detail">`;
-    if(m.detail){ h+=`<div class="dh">${esc(m.detail.title)}</div>`; m.detail.sets.forEach(s=>{ const p=String(s).split(' — '); h+=`<div class="splitrow"><span>${esc(p[0])}</span><span class="vv">${esc(p[1]||'')}</span></div>`; }); h+=`<div class="pend" style="margin-top:8px"><em>Real logged session.</em> Full history renders here once the per-workout pull is wired.</div>`; }
-    else h+=`<div class="pend"><em>Per-workout results wire in here</em> once the per-workout pull is connected.</div>`;
+    const strk = (m.streak&&m.streak>1)?` <span class="pill strk">🔥 ${m.streak}</span>`:'';
+    h+=`<details class="item${lead}"><summary class="row"><div class="rk">${i+1}</div><div class="nm">${esc(m.n)} <span class="pill ${cls}">${lbl}</span>${strk}</div><div class="wk tnum">${m.w} <small>WK</small></div><div class="career tnum">${m.c?`<b>${m.c}</b> career`:''}</div><span class="chev">▾</span></summary><div class="detail">`;
+    if(m.detail&&m.detail.moves){ h+=`<div class="dh">${esc(m.detail.title||'Last session')}${m.detail.date?` · <span class="dt">${esc(m.detail.date)}</span>`:''}</div>`;
+      m.detail.moves.forEach(mv=>{ const r=[]; if(mv.reps) r.push(`${mv.reps} reps`); if(mv.weight) r.push(`${mv.weight.toLocaleString()} lb`); if(mv.time) r.push(`${mv.time}s`); h+=`<div class="splitrow"><span>${esc(mv.name)}</span><span class="vv">${esc(r.join(' · ')||'logged')}</span></div>`; });
+      if(m.prs&&m.prs.length){ h+=`<div class="dh" style="margin-top:10px">Personal bests</div>`; m.prs.slice(0,5).forEach(p=>{ const v=p.weight?`${p.weight.toLocaleString()} lb`:`${p.reps} reps`; h+=`<div class="splitrow"><span>🏆 ${esc(p.name)}</span><span class="vv">${esc(v)}<small style="opacity:.6"> · ${esc(p.date)}</small></span></div>`; }); }
+    }
+    else h+=`<div class="pend"><em>No logged session yet in this window.</em> Detail appears here after their next logged workout.</div>`;
     h+='</div></details>';
   });
   h+='</div>';
@@ -149,5 +157,5 @@ function render(g, meta, d){
   const shown=Math.min(namedZeros.length,8); if(zeros>shown) h+=`<span class="more">+${zeros-shown} more not logging</span>`;
   h+='</div>'; panel.innerHTML=h;
 }
-show('ATHENA');
+if (only && ORDER.includes(only)) { swEl.hidden = true; show(only); } else { show('ATHENA'); }
 </script></body></html>
