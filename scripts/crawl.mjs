@@ -36,6 +36,35 @@ function currentStreak(datesISO) {
   return streak;
 }
 
+async function resolveMemberIds(page, gid) {
+  return page.evaluate(async (gid) => {
+    const log = [];
+    const tryGet = async (u) => { try { const r = await fetch(u, { headers: { Accept: 'application/json' } }); const j = r.ok ? await r.json().catch(() => null) : null; return { s: r.status, j }; } catch (e) { return { s: 'ERR', j: null }; } };
+    const extractIds = (j) => {
+      if (!j) return null;
+      const arrays = [j.member_ids, j.user_ids, j.client_ids, j.members, j.users, j.clients, Array.isArray(j) ? j : null];
+      for (const a of arrays) if (Array.isArray(a) && a.length) return a.map(x => (x && typeof x === 'object') ? (x.user_id || x.id || x.client_id) : x).filter(Boolean).map(String);
+      return null;
+    };
+    const sources = [
+      `/api/v4/groups/${gid}`,
+      `/api/v4/groups/${gid}/members`,
+      `/api/v4/groups/${gid}/members?page=1&per_page=500`,
+      `/api/v3/groups/${gid}/members`,
+      `/api/v3/groups/${gid}`,
+      `/api/v4/clients?group_id=${gid}&per_page=500`,
+      `/api/v4/group_memberships?group_id=${gid}`,
+    ];
+    for (const u of sources) {
+      const { s, j } = await tryGet(u);
+      const ids = extractIds(j);
+      log.push(`${u.split('?')[0].slice(-40)} -> ${s}${ids ? ` ids=${ids.length}` : (j && !Array.isArray(j) ? ` keys=[${Object.keys(j).slice(0, 12).join(',')}]` : '')}`);
+      if (ids && ids.length && ids.length < 150) return { ids: [...new Set(ids)], log };
+    }
+    return { ids: null, log };
+  }, gid);
+}
+
 async function pullAthlete(page, uid, days, tz) {
   return page.evaluate(async ({ uid, days, tz }) => {
     const now = Math.floor(Date.now() / 1000);
@@ -81,47 +110,28 @@ async function main() {
   const me = await page.evaluate(async () => { try { const r = await fetch('/api/v4/users/me', { headers: { Accept: 'application/json' } }); return r.ok ? (await r.json()).id : null; } catch { return null; } });
   if (!me) throw new Error('LOGIN FAILED — check EXERCISE_EMAIL / EXERCISE_PASSWORD.');
   console.log(`Logged in OK (user ${me}).`);
+
+  const users = await page.evaluate(async () => {
+    try { const r = await fetch('/api/v4/users?fetch_all=true', { headers: { Accept: 'application/json' } }); const j = await r.json(); const arr = Array.isArray(j) ? j : (j.users || j.data || []); return arr.map(u => ({ id: String(u.id), first: u.first_name || '', last: u.last_name || '' })); } catch { return []; }
+  });
+  const byId = new Map(users.map(u => [u.id, u]));
+  console.log(`Account roster: ${users.length} users.`);
   await mkdir(new URL('../site/data/', import.meta.url), { recursive: true });
 
   for (const [name, id] of Object.entries(GROUPS)) {
     console.log(`\n=== ${name} (group ${id}) ===`);
-    const probe = await page.evaluate(async (gid) => {
-      const eps = [
-        `/api/v4/groups/${gid}/members?fetch_all=true`, `/api/v3/groups/${gid}/members?fetch_all=true`,
-        `/api/v4/groups/${gid}/users?fetch_all=true`, `/api/v3/groups/${gid}/clients?fetch_all=true`,
-        `/api/v4/groups/${gid}?fetch_all=true`, `/api/v3/groups/${gid}?fetch_all=true`,
-        `/api/v4/clients?group_id=${gid}&fetch_all=true`, `/api/v3/clients?group_id=${gid}&fetch_all=true`,
-        `/api/v4/users?group_id=${gid}&fetch_all=true`, `/api/v3/group_memberships?group_id=${gid}&fetch_all=true`,
-      ];
-      const out = [];
-      for (const ep of eps) {
-        try {
-          const r = await fetch(ep, { headers: { Accept: 'application/json' } });
-          let arr = null, keys = null;
-          if (r.ok) { const j = await r.json().catch(() => null); arr = Array.isArray(j) ? j : (j && (j.members || j.users || j.clients || j.data || j.results)) || null; if (Array.isArray(arr) && arr[0] && typeof arr[0] === 'object') keys = Object.keys(arr[0]).slice(0, 16); }
-          out.push({ ep, status: r.status, len: Array.isArray(arr) ? arr.length : null, keys, arr: (Array.isArray(arr) && keys) ? arr : null });
-        } catch (e) { out.push({ ep, status: 'ERR' }); }
-      }
-      return out;
-    }, id);
-    for (const p of probe) console.log(`   api ${p.ep.split('?')[0].slice(-42)} -> ${p.status}${p.len != null ? ` len=${p.len} keys=[${(p.keys || []).join(', ')}]` : ''}`);
-    const pick = (o, re) => { for (const k of Object.keys(o)) if (re.test(k)) return o[k]; return undefined; };
-    const source = probe.find(p => p.arr && p.keys && p.keys.some(k => /name/i.test(k)))?.arr || null;
-    const rows = !source ? [] : source.map(o => {
-      const nm = String(pick(o, /^name$|full_?name/i) || '');
-      const first = pick(o, /^(first_?name|firstname)$/i) ?? pick(o, /first/i) ?? nm.split(' ')[0] ?? '';
-      const last = pick(o, /^(last_?name|lastname)$/i) ?? pick(o, /last/i) ?? nm.split(' ').slice(1).join(' ') ?? '';
-      const uid = pick(o, /^user_?id$/i) ?? pick(o, /user_?id/i) ?? pick(o, /^id$/i);
-      return { userId: String(uid ?? ''), first: String(first ?? '').trim(), last: String(last ?? '').trim() };
-    }).filter(r => r.userId && (r.first || r.last));
-    console.log(`  report: ${rows.length} athletes${source ? ' (from members API)' : ' — no roster endpoint worked'}`);
-    if (rows.length === 0) { console.log(`  ! ${name}: 0 roster rows — skipping to preserve last-good data`); continue; }
+    const { ids, log } = await resolveMemberIds(page, id);
+    for (const l of log) console.log(`   ${l}`);
+    if (!ids) { console.log(`  ! ${name}: could not resolve a per-group member list — skipping (preserving last-good data)`); continue; }
+    const roster = ids.map(uid => byId.get(String(uid))).filter(Boolean).filter(u => u.first || u.last);
+    console.log(`  ${name}: ${roster.length} members`);
+    if (roster.length === 0 || roster.length >= 150) { console.log(`  ! ${name}: roster size ${roster.length} looks wrong — skipping`); continue; }
 
     const members = [], athleteRows = [], resultRows = [];
-    for (const r of rows) {
-      const uid = +r.userId || r.userId;
-      const m = { n: `${r.first} ${r.last}`.trim(), w: 0, h: '—', uid };
-      if (Number.isFinite(uid)) athleteRows.push({ exercise_user_id: uid, first_name: r.first, last_name: r.last, grp: name });
+    for (const u of roster) {
+      const uid = +u.id || u.id;
+      const m = { n: `${u.first} ${u.last}`.trim(), w: 0, h: '—', uid };
+      if (Number.isFinite(uid)) athleteRows.push({ exercise_user_id: uid, first_name: u.first, last_name: u.last, grp: name });
       try {
         const perf = await pullAthlete(page, m.uid, DAYS, TZ);
         if (perf) {
@@ -131,12 +141,12 @@ async function main() {
           if (perf.rows && Number.isFinite(uid)) for (const row of perf.rows) resultRows.push({ exercise_user_id: uid, ...row });
         }
       } catch (e) { console.log(`  ! perf failed for ${m.n}: ${e.message}`); }
-      try { const u = await page.evaluate(async uid => { const res = await fetch('/api/v4/users/' + uid, { headers: { Accept: 'application/json' } }); if (!res.ok) return null; const j = await res.json(); return j.num_workouts ?? null; }, m.uid); if (u && u > 0) m.c = u; } catch {}
+      try { const c = await page.evaluate(async uid => { const res = await fetch('/api/v4/users/' + uid, { headers: { Accept: 'application/json' } }); if (!res.ok) return null; const j = await res.json(); return j.num_workouts ?? null; }, m.uid); if (c && c > 0) m.c = c; } catch {}
       delete m.uid; members.push(m);
       console.log(`  ${m.n}: ${m.w} logged, streak ${m.streak ?? 0}`);
     }
     members.sort((a, b) => b.w - a.w);
-    const payload = { group: name, updated: new Date().toISOString().slice(0, 10), window: 'last 30 days', total: members.length, members, zerosNamed: members.filter(m => m.w === 0).map(m => m.n).slice(0, 8) };
+    const payload = { group: name, updated: new Date().toISOString().slice(0, 10), window: 'last 45 days', total: members.length, members, zerosNamed: members.filter(m => m.w === 0).map(m => m.n).slice(0, 8) };
     await writeFile(new URL(`../site/data/${name}.json`, import.meta.url), JSON.stringify(payload, null, 2));
     console.log(`  wrote ${members.length} members (${members.filter(m => m.w > 0).length} logging)`);
     if (SB_ON) { await sbUpsert('athletes', athleteRows, 'exercise_user_id'); await sbUpsert('results', resultRows, 'exercise_user_id,ex_workout_id,exercise_id'); console.log(`  supabase: ${athleteRows.length} athletes, ${resultRows.length} result rows`); }
