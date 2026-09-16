@@ -31,9 +31,6 @@ jobs:
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: npm run crawl
 
-      - name: Rebuild isolated group pages from fresh data
-        run: node scripts/build-pages.mjs
-
       - name: Commit refreshed data + pages
         run: |
           git config user.name  "ftx-board-bot"
