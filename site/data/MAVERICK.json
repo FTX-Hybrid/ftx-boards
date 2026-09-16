@@ -1,8 +1,12 @@
 {
   "group": "MAVERICK",
-  "updated": "2026-09-16",
-  "window": "last 30 days",
-  "total": 0,
-  "members": [],
+  "updated": "2026-09-15",
+  "window": "Aug 16 – Sep 15, 2026",
+  "total": 3,
+  "members": [
+    {"n": "Jake Hart", "w": 100, "h": "58h", "c": 472},
+    {"n": "Ricky Osterloh", "w": 0, "h": "—"},
+    {"n": "Jeff Ball", "w": 0, "h": "—"}
+  ],
   "zerosNamed": []
 }
