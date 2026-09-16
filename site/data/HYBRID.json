@@ -1,35 +1,56 @@
 {
   "group": "HYBRID",
   "updated": "2026-09-16",
-  "window": "last 45 days",
-  "total": 50,
+  "window": "since Jan 1, 2026",
+  "total": 48,
   "members": [
     {
-      "n": "Aaron Philpot",
-      "w": 53,
+      "n": "Alejandro Jones",
+      "w": 11,
       "h": "—",
-      "streak": 1,
-      "c": 174
-    },
-    {
-      "n": "Lindsay Abstein",
-      "w": 50,
-      "h": "—",
-      "streak": 8,
-      "c": 119
-    },
-    {
-      "n": "Jerrett Shannon",
-      "w": 48,
-      "h": "—",
-      "streak": 1,
+      "streak": 0,
       "detail": {
-        "date": "2026-09-01",
-        "title": "9/1 - Hyrox Running",
+        "date": "2026-04-06",
+        "title": "Hybrid 4/6",
         "moves": [
           {
-            "name": "Hyrox Running",
-            "id": 1011785,
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Bench Press",
+            "id": 993209,
+            "reps": 1,
+            "weight": 295,
+            "time": 0
+          },
+          {
+            "name": "Hyrox AMRAP",
+            "id": 1011780,
+            "reps": 0,
+            "weight": 0,
+            "time": 600
+          },
+          {
+            "name": "Hyrox Metcon",
+            "id": 1014489,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Worlds Work",
+            "id": 1014447,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Cool Down",
+            "id": 1014471,
             "reps": 0,
             "weight": 0,
             "time": 0
@@ -38,465 +59,608 @@
       },
       "prs": [
         {
-          "name": "One-Arm Dumbbell Row",
-          "reps": 40,
+          "name": "Reverse Fly",
+          "reps": 60,
+          "weight": 3480,
+          "date": "2026-02-23"
+        },
+        {
+          "name": "Lat Pulldown",
+          "reps": 60,
+          "weight": 6600,
+          "date": "2026-03-02"
+        },
+        {
+          "name": "Good Morning",
+          "reps": 60,
           "weight": 0,
-          "date": "2026-08-17"
+          "date": "2026-02-24"
+        },
+        {
+          "name": "Push-Up",
+          "reps": 100,
+          "weight": 0,
+          "date": "2026-02-23"
+        },
+        {
+          "name": "Bent-Over Row",
+          "reps": 60,
+          "weight": 8100,
+          "date": "2026-02-23"
         },
         {
           "name": "Bench Press",
-          "reps": 3,
-          "weight": 1485,
-          "date": "2026-08-17"
+          "reps": 1,
+          "weight": 295,
+          "date": "2026-04-06"
         },
         {
-          "name": "Push Press",
-          "reps": 100,
-          "weight": 15500,
-          "date": "2026-08-17"
-        },
-        {
-          "name": "Tricep Dip",
-          "reps": 100,
+          "name": "Chin-Up",
+          "reps": 50,
           "weight": 0,
-          "date": "2026-08-03"
+          "date": "2026-03-02"
+        },
+        {
+          "name": "Behind Neck Military Press",
+          "reps": 75,
+          "weight": 4375,
+          "date": "2026-03-02"
+        }
+      ],
+      "c": 36
+    },
+    {
+      "n": "Talon Smith",
+      "w": 9,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-04-10",
+        "title": "Hybrid 4/10",
+        "moves": [
+          {
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 1,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Hybrid Metcon",
+            "id": 1018619,
+            "reps": 4,
+            "weight": 0,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Running",
+          "reps": 2,
+          "weight": 0,
+          "date": "2026-04-03"
+        },
+        {
+          "name": "Warm Up",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-04-10"
+        },
+        {
+          "name": "Hyrox Running",
+          "reps": 6,
+          "weight": 0,
+          "date": "2026-02-24"
+        },
+        {
+          "name": "Hybrid Metcon",
+          "reps": 4,
+          "weight": 0,
+          "date": "2026-04-10"
+        },
+        {
+          "name": "Other",
+          "reps": 2,
+          "weight": 0,
+          "date": "2026-04-04"
+        }
+      ],
+      "c": 152
+    },
+    {
+      "n": "Jerrett Shannon",
+      "w": 8,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-04-11",
+        "title": "Hyrox Saturday 4/11",
+        "moves": [
+          {
+            "name": "Running",
+            "id": 993286,
+            "reps": 0,
+            "weight": 0,
+            "time": 1200
+          },
+          {
+            "name": "Hyrox Metcon",
+            "id": 1014489,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Bench Press",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-04-06"
+        },
+        {
+          "name": "Hyrox Running",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-04-05"
         }
       ],
       "c": 203
     },
     {
       "n": "Lillie Johnston",
-      "w": 46,
+      "w": 7,
       "h": "—",
-      "streak": 1,
+      "streak": 0,
       "c": 132
     },
     {
-      "n": "Tammi Wright",
-      "w": 42,
+      "n": "Sandy Luna",
+      "w": 7,
       "h": "—",
-      "streak": 2,
+      "streak": 0,
       "detail": {
-        "date": "2026-09-15",
-        "title": "Intervals",
+        "date": "2026-04-10",
+        "title": "Fort Worth Running",
         "moves": [
           {
             "name": "Running",
             "id": 993286,
-            "reps": 0,
+            "reps": 2,
             "weight": 0,
-            "time": 2100
+            "time": 0
           }
         ]
       },
       "prs": [
         {
-          "name": "Dumbbell Bench Press",
-          "reps": 24,
-          "weight": 680,
-          "date": "2026-09-14"
+          "name": "Walking",
+          "reps": 2,
+          "weight": 0,
+          "date": "2026-04-10"
+        },
+        {
+          "name": "Running",
+          "reps": 2,
+          "weight": 0,
+          "date": "2026-04-04"
+        }
+      ],
+      "c": 45
+    },
+    {
+      "n": "Wendy Vickery",
+      "w": 6,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-03-30",
+        "title": "3/30/2026",
+        "moves": [
+          {
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 1,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Pull-Up",
+            "id": 993256,
+            "reps": 65,
+            "weight": 0,
+            "time": 23400
+          },
+          {
+            "name": "Push Press",
+            "id": 993258,
+            "reps": 32,
+            "weight": 1800,
+            "time": 0
+          },
+          {
+            "name": "Hammer Curl",
+            "id": 993219,
+            "reps": 100,
+            "weight": 1200,
+            "time": 0
+          },
+          {
+            "name": "Bench Dip",
+            "id": 993135,
+            "reps": 100,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Hybrid Metcon",
+            "id": 1018619,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Bench Dip",
+          "reps": 100,
+          "weight": 0,
+          "date": "2026-03-30"
         },
         {
           "name": "Barbell Back Squat",
-          "reps": 21,
-          "weight": 2540,
-          "date": "2026-09-11"
-        },
-        {
-          "name": "Push-Up",
-          "reps": 45,
-          "weight": 0,
-          "date": "2026-09-14"
-        },
-        {
-          "name": "Medicine Ball Russian Twist",
           "reps": 15,
-          "weight": 0,
-          "date": "2026-09-11"
-        },
-        {
-          "name": "Deadlift",
-          "reps": 4,
-          "weight": 780,
-          "date": "2026-09-11"
+          "weight": 1475,
+          "date": "2026-03-25"
         },
         {
           "name": "Hammer Curl",
-          "reps": 30,
-          "weight": 550,
-          "date": "2026-09-14"
+          "reps": 100,
+          "weight": 1200,
+          "date": "2026-03-30"
         },
         {
-          "name": "Behind Head Skull Crusher",
-          "reps": 30,
-          "weight": 600,
-          "date": "2026-09-14"
+          "name": "Bulgarian Dumbbell Split Squat",
+          "reps": 60,
+          "weight": 1584,
+          "date": "2026-03-25"
         },
         {
-          "name": "Box Jump",
-          "reps": 15,
+          "name": "Pull-Up",
+          "reps": 65,
           "weight": 0,
-          "date": "2026-09-11"
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Push Press",
+          "reps": 32,
+          "weight": 1800,
+          "date": "2026-03-30"
+        },
+        {
+          "name": "Warm Up",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-03-25"
+        },
+        {
+          "name": "Hybrid Metcon",
+          "reps": 65,
+          "weight": 4225,
+          "date": "2026-03-25"
+        }
+      ],
+      "c": 8
+    },
+    {
+      "n": "Tammi Wright",
+      "w": 5,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-04-07",
+        "title": "Hyrox 4|7 - Track Day",
+        "moves": [
+          {
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Hyrox Running",
+            "id": 1011785,
+            "reps": 6,
+            "weight": 0,
+            "time": 1800
+          },
+          {
+            "name": "Worlds Work",
+            "id": 1014447,
+            "reps": 1,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Cool Down",
+            "id": 1014471,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Bench Press",
+          "reps": 1,
+          "weight": 125,
+          "date": "2026-04-06"
+        },
+        {
+          "name": "Hyrox Running",
+          "reps": 6,
+          "weight": 0,
+          "date": "2026-04-07"
+        },
+        {
+          "name": "Worlds Work",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-04-07"
+        },
+        {
+          "name": "Hyrox Metcon",
+          "reps": 110,
+          "weight": 0,
+          "date": "2026-04-06"
         }
       ],
       "c": 131
     },
     {
-      "n": "Jennifer Ward",
-      "w": 31,
+      "n": "Holden Foster",
+      "w": 5,
       "h": "—",
-      "streak": 1,
+      "streak": 0,
       "detail": {
-        "date": "2026-09-15",
-        "title": "Intervals",
+        "date": "2026-02-26",
+        "title": "2/26/2026",
         "moves": [
           {
-            "name": "Running",
-            "id": 993286,
-            "reps": 1,
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 0,
             "weight": 0,
-            "time": 3000
-          }
-        ]
-      },
-      "prs": [
-        {
-          "name": "Dumbbell Bench Press",
-          "reps": 24,
-          "weight": 1320,
-          "date": "2026-09-08"
-        },
-        {
-          "name": "Bird Dog",
-          "reps": 30,
-          "weight": 0,
-          "date": "2026-08-25"
-        },
-        {
-          "name": "Romanian Deadlift",
-          "reps": 24,
-          "weight": 0,
-          "date": "2026-08-30"
-        },
-        {
-          "name": "Barbell Back Squat",
-          "reps": 23,
-          "weight": 1830,
-          "date": "2026-09-05"
-        },
-        {
-          "name": "Push-Up",
-          "reps": 1,
-          "weight": 0,
-          "date": "2026-09-08"
-        },
-        {
-          "name": "Walking Bodyweight Lunge",
-          "reps": 30,
-          "weight": 0,
-          "date": "2026-08-30"
-        },
-        {
-          "name": "Medicine Ball Russian Twist",
-          "reps": 15,
-          "weight": 270,
-          "date": "2026-09-10"
-        },
-        {
-          "name": "Bent-Over Row",
-          "reps": 32,
-          "weight": 1600,
-          "date": "2026-09-01"
-        }
-      ],
-      "c": 40
-    },
-    {
-      "n": "Talon Smith",
-      "w": 24,
-      "h": "—",
-      "streak": 2,
-      "detail": {
-        "date": "2026-08-27",
-        "title": "8/27 Engine - 30 Minute EMOM",
-        "moves": [
+            "time": 0
+          },
+          {
+            "name": "Bench Press",
+            "id": 993209,
+            "reps": 75,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Hammer Curl",
+            "id": 993219,
+            "reps": 60,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Behind Head Skull Crusher",
+            "id": 993221,
+            "reps": 60,
+            "weight": 0,
+            "time": 0
+          },
           {
             "name": "Hybrid Metcon",
             "id": 1018619,
-            "reps": 1,
-            "weight": 35,
+            "reps": 0,
+            "weight": 0,
             "time": 0
           }
         ]
       },
       "prs": [
         {
-          "name": "Kettlebell Swing",
+          "name": "Bench Press",
+          "reps": 75,
+          "weight": 0,
+          "date": "2026-02-26"
+        },
+        {
+          "name": "Hammer Curl",
           "reps": 60,
-          "weight": 3180,
-          "date": "2026-08-13"
-        },
-        {
-          "name": "Romanian Deadlift",
-          "reps": 30,
-          "weight": 4050,
-          "date": "2026-08-13"
-        },
-        {
-          "name": "Bulgarian Dumbbell Split Squat",
-          "reps": 30,
           "weight": 0,
-          "date": "2026-08-13"
+          "date": "2026-02-26"
         },
         {
-          "name": "One Leg Elevated Calf Raise",
-          "reps": 45,
+          "name": "Behind Head Skull Crusher",
+          "reps": 60,
           "weight": 0,
-          "date": "2026-08-13"
-        },
-        {
-          "name": "Hyrox Running",
-          "reps": 1,
-          "weight": 0,
-          "date": "2026-08-09"
-        },
-        {
-          "name": "Hybrid Metcon",
-          "reps": 1,
-          "weight": 35,
-          "date": "2026-08-27"
-        },
-        {
-          "name": "Sandbag Lunges",
-          "reps": 80,
-          "weight": 0,
-          "date": "2026-08-13"
+          "date": "2026-02-26"
         }
       ],
-      "c": 152
-    },
-    {
-      "n": "Holden Foster",
-      "w": 19,
-      "h": "—",
-      "streak": 1,
       "c": 113
     },
     {
-      "n": "Nick Gracia",
-      "w": 11,
-      "h": "—",
-      "streak": 1,
-      "c": 35
-    },
-    {
-      "n": "Justin Rothrock",
-      "w": 8,
+      "n": "Sergio Martinez",
+      "w": 4,
       "h": "—",
       "streak": 0,
       "detail": {
-        "date": "2026-09-02",
-        "title": "9/2",
-        "moves": [
-          {
-            "name": "Alternating Plyometric Lunge",
-            "id": 993290,
-            "reps": 50,
-            "weight": 0,
-            "time": 0
-          },
-          {
-            "name": "Barbell Back Squat",
-            "id": 993166,
-            "reps": 0,
-            "weight": 0,
-            "time": 0
-          },
-          {
-            "name": "Pogo Plate Jump",
-            "id": 1119085,
-            "reps": 80,
-            "weight": 0,
-            "time": 0
-          },
-          {
-            "name": "Hybrid Metcon",
-            "id": 1018619,
-            "reps": 0,
-            "weight": 0,
-            "time": 0
-          }
-        ]
-      },
-      "prs": [
-        {
-          "name": "One-Arm Dumbbell Row",
-          "reps": 40,
-          "weight": 0,
-          "date": "2026-08-17"
-        },
-        {
-          "name": "Bent-Over Row",
-          "reps": 32,
-          "weight": 0,
-          "date": "2026-08-24"
-        },
-        {
-          "name": "Bulgarian Dumbbell Split Squat",
-          "reps": 30,
-          "weight": 0,
-          "date": "2026-08-12"
-        },
-        {
-          "name": "Pull-Up",
-          "reps": 20,
-          "weight": 0,
-          "date": "2026-08-24"
-        },
-        {
-          "name": "Push Press",
-          "reps": 100,
-          "weight": 0,
-          "date": "2026-08-17"
-        },
-        {
-          "name": "Alternating Plyometric Lunge",
-          "reps": 50,
-          "weight": 0,
-          "date": "2026-09-02"
-        },
-        {
-          "name": "Pogo Plate Jump",
-          "reps": 80,
-          "weight": 0,
-          "date": "2026-09-02"
-        }
-      ],
-      "c": 10
-    },
-    {
-      "n": "Veronica (Vee) Hardy",
-      "w": 3,
-      "h": "—",
-      "streak": 0,
-      "detail": {
-        "date": "2026-08-23",
-        "title": "Long Run Sunday",
+        "date": "2026-04-05",
+        "title": "Hyrox Sunday Run",
         "moves": [
           {
             "name": "Hyrox Running",
             "id": 1011785,
-            "reps": 1,
+            "reps": 0,
             "weight": 0,
-            "time": 7899
+            "time": 3600
           }
         ]
       },
-      "prs": [
-        {
-          "name": "Hyrox Running",
-          "reps": 1,
-          "weight": 0,
-          "date": "2026-08-09"
-        }
-      ],
-      "c": 7
+      "c": 6
     },
     {
-      "n": "Angela Cornelius",
-      "w": 2,
+      "n": "Nick Gracia",
+      "w": 3,
       "h": "—",
       "streak": 0,
       "detail": {
-        "date": "2026-08-13",
-        "title": "8/13 Engine - 40 Minute EMOM",
+        "date": "2026-04-07",
+        "title": "Hyrox 4|7 - Track Day",
         "moves": [
           {
-            "name": "Hybrid Metcon",
-            "id": 1018619,
+            "name": "Warm Up",
+            "id": 1011784,
             "reps": 0,
-            "weight": 10,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Hyrox Running",
+            "id": 1011785,
+            "reps": 4,
+            "weight": 0,
+            "time": 1200
+          },
+          {
+            "name": "Worlds Work",
+            "id": 1014447,
+            "reps": 1,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Cool Down",
+            "id": 1014471,
+            "reps": 0,
+            "weight": 0,
             "time": 0
           }
         ]
       },
       "prs": [
-        {
-          "name": "Overhead Rope Tricep Extension",
-          "reps": 36,
-          "weight": 360,
-          "date": "2026-08-07"
-        },
         {
           "name": "Bench Press",
-          "reps": 24,
-          "weight": 1320,
-          "date": "2026-08-07"
-        },
-        {
-          "name": "Incline Dumbbell Bench Press",
-          "reps": 30,
-          "weight": 300,
-          "date": "2026-08-07"
-        },
-        {
-          "name": "Hybrid Metcon",
-          "reps": 0,
-          "weight": 10,
-          "date": "2026-08-07"
-        }
-      ],
-      "c": 4
-    },
-    {
-      "n": "Sarah Caty Cochrum",
-      "w": 2,
-      "h": "—",
-      "streak": 0,
-      "detail": {
-        "date": "2026-08-07",
-        "title": "Hyrox Specific",
-        "moves": [
-          {
-            "name": "Hyrox Metcon",
-            "id": 1014489,
-            "reps": 1,
-            "weight": 0,
-            "time": 0
-          }
-        ]
-      },
-      "prs": [
-        {
-          "name": "Push Press",
           "reps": 1,
-          "weight": 175,
-          "date": "2026-08-03"
+          "weight": 0,
+          "date": "2026-04-06"
         },
         {
-          "name": "Tricep Dip",
-          "reps": 100,
+          "name": "Hyrox AMRAP",
+          "reps": 1,
           "weight": 0,
-          "date": "2026-08-03"
+          "date": "2026-04-06"
+        },
+        {
+          "name": "Hyrox Running",
+          "reps": 4,
+          "weight": 0,
+          "date": "2026-04-07"
+        },
+        {
+          "name": "Worlds Work",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-04-06"
         },
         {
           "name": "Hyrox Metcon",
           "reps": 1,
           "weight": 0,
-          "date": "2026-08-07"
+          "date": "2026-04-06"
         }
       ],
-      "c": 3
+      "c": 35
     },
     {
-      "n": "Sandy Luna",
-      "w": 1,
+      "n": "Jennifer Ward",
+      "w": 2,
       "h": "—",
       "streak": 0,
       "detail": {
-        "date": "2026-08-06",
-        "title": "EMOM",
+        "date": "2026-04-07",
+        "title": "Hyrox 4|7 - Track Day",
         "moves": [
+          {
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Hyrox Running",
+            "id": 1011785,
+            "reps": 0,
+            "weight": 0,
+            "time": 2022
+          },
+          {
+            "name": "Worlds Work",
+            "id": 1014447,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Cool Down",
+            "id": 1014471,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          }
+        ]
+      },
+      "c": 40
+    },
+    {
+      "n": "Derek Uebel",
+      "w": 2,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-04-09",
+        "title": "Hybrid 4/9",
+        "moves": [
+          {
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Push Press",
+            "id": 993258,
+            "reps": 1,
+            "weight": 145,
+            "time": 0
+          },
+          {
+            "name": "Single Leg Plate Hops",
+            "id": 1065073,
+            "reps": 50,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Reverse Fly",
+            "id": 993159,
+            "reps": 50,
+            "weight": 0,
+            "time": 0
+          },
           {
             "name": "Hybrid Metcon",
             "id": 1018619,
@@ -506,56 +670,123 @@
           }
         ]
       },
-      "c": 45
+      "prs": [
+        {
+          "name": "Reverse Fly",
+          "reps": 50,
+          "weight": 0,
+          "date": "2026-04-09"
+        },
+        {
+          "name": "Bench Press",
+          "reps": 1,
+          "weight": 225,
+          "date": "2026-04-06"
+        },
+        {
+          "name": "Push Press",
+          "reps": 1,
+          "weight": 145,
+          "date": "2026-04-09"
+        },
+        {
+          "name": "Single Leg Plate Hops",
+          "reps": 50,
+          "weight": 0,
+          "date": "2026-04-09"
+        }
+      ],
+      "c": 9
     },
     {
-      "n": "Derek Uebel",
+      "n": "Antonio Basalo",
+      "w": 1,
+      "h": "—",
+      "streak": 0,
+      "c": 3
+    },
+    {
+      "n": "Angela Cornelius",
       "w": 1,
       "h": "—",
       "streak": 0,
       "detail": {
-        "date": "2026-08-05",
-        "title": "Front Squat/VO2 Max",
+        "date": "2026-03-06",
+        "title": "3/6/2026",
         "moves": [
           {
-            "name": "Front Squat",
-            "id": 993194,
-            "reps": 1,
-            "weight": 225,
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 0,
+            "weight": 0,
             "time": 0
           },
           {
-            "name": "VO2 Max",
-            "id": 1011793,
-            "reps": 0,
+            "name": "Power Clean + Front Squat",
+            "id": 1051890,
+            "reps": 24,
             "weight": 0,
-            "time": 960
+            "time": 0
           },
           {
-            "name": "Sled Pull",
-            "id": 1055065,
+            "name": "Hybrid Metcon",
+            "id": 1018619,
             "reps": 0,
             "weight": 0,
-            "time": 720
-          },
-          {
-            "name": "Ski Erg",
-            "id": 1105221,
-            "reps": 0,
-            "weight": 0,
-            "time": 1200
+            "time": 0
           }
         ]
       },
       "prs": [
         {
-          "name": "Front Squat",
-          "reps": 1,
-          "weight": 225,
-          "date": "2026-08-05"
+          "name": "Power Clean + Front Squat",
+          "reps": 24,
+          "weight": 0,
+          "date": "2026-03-06"
         }
       ],
-      "c": 9
+      "c": 4
+    },
+    {
+      "n": "Micheal Spencer",
+      "w": 1,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-03-31",
+        "title": "3/31/2026",
+        "moves": [
+          {
+            "name": "Warm Up",
+            "id": 1011784,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Hyrox Running",
+            "id": 1011785,
+            "reps": 0,
+            "weight": 0,
+            "time": 3000
+          },
+          {
+            "name": "Worlds Work",
+            "id": 1014447,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Cool Down",
+            "id": 1014471,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          }
+        ]
+      },
+      "c": 1
     },
     {
       "n": "Jaime Smith",
@@ -589,11 +820,11 @@
       "c": 1
     },
     {
-      "n": "Merly",
+      "n": "Lindsay Abstein",
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 1
+      "c": 119
     },
     {
       "n": "Gian Doloroso",
@@ -601,13 +832,6 @@
       "h": "—",
       "streak": 0,
       "c": 1
-    },
-    {
-      "n": "Antonio Basalo",
-      "w": 0,
-      "h": "—",
-      "streak": 0,
-      "c": 3
     },
     {
       "n": "Zack Cain",
@@ -665,13 +889,6 @@
       "streak": 0
     },
     {
-      "n": "Sergio Martinez",
-      "w": 0,
-      "h": "—",
-      "streak": 0,
-      "c": 6
-    },
-    {
       "n": "Adam Stovall",
       "w": 0,
       "h": "—",
@@ -690,17 +907,24 @@
       "streak": 0
     },
     {
-      "n": "Wendy Vickery",
-      "w": 0,
-      "h": "—",
-      "streak": 0,
-      "c": 8
-    },
-    {
       "n": "Ivette Olivas",
       "w": 0,
       "h": "—",
       "streak": 0
+    },
+    {
+      "n": "Justin Rothrock",
+      "w": 0,
+      "h": "—",
+      "streak": 0,
+      "c": 10
+    },
+    {
+      "n": "Veronica (Vee) Hardy",
+      "w": 0,
+      "h": "—",
+      "streak": 0,
+      "c": 7
     },
     {
       "n": "Alison (Ali) Marwan",
@@ -721,13 +945,6 @@
       "streak": 0
     },
     {
-      "n": "Alejandro Jones",
-      "w": 0,
-      "h": "—",
-      "streak": 0,
-      "c": 36
-    },
-    {
       "n": "Heather Anderson",
       "w": 0,
       "h": "—",
@@ -741,11 +958,11 @@
       "streak": 0
     },
     {
-      "n": "Micheal Spencer",
+      "n": "Sarah Caty Cochrum",
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 1
+      "c": 3
     },
     {
       "n": "Andrew P",
@@ -785,8 +1002,8 @@
     "Taylor Andrews",
     "Mirella Garcia",
     "Jeffrey Bennett",
-    "Merly",
+    "Lindsay Abstein",
     "Gian Doloroso",
-    "Antonio Basalo"
+    "Zack Cain"
   ]
 }
