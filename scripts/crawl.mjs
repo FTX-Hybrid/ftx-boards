@@ -42,18 +42,16 @@ async function resolveMemberIds(page, gid) {
     const tryGet = async (u) => { try { const r = await fetch(u, { headers: { Accept: 'application/json' } }); const j = r.ok ? await r.json().catch(() => null) : null; return { s: r.status, j }; } catch (e) { return { s: 'ERR', j: null }; } };
     const extractIds = (j) => {
       if (!j) return null;
-      const arrays = [j.member_ids, j.user_ids, j.client_ids, j.members, j.users, j.clients, Array.isArray(j) ? j : null];
-      for (const a of arrays) if (Array.isArray(a) && a.length) return a.map(x => (x && typeof x === 'object') ? (x.user_id || x.id || x.client_id) : x).filter(Boolean).map(String);
+      const arrays = [j.member_ids, j.user_ids, j.client_ids, j.members, j.users, j.clients, j.client, j.data, Array.isArray(j) ? j : null];
+      for (const a of arrays) if (Array.isArray(a) && a.length) return a.map(x => (x && typeof x === 'object') ? (x.user_id || x.id || (x.user && x.user.id) || x.client_id) : x).filter(Boolean).map(String);
       return null;
     };
     const sources = [
-      `/api/v4/groups/${gid}`,
+      `/api/v4/clients?group_id=${gid}&per_page=1000`,
+      `/api/v4/clients?group_ids[]=${gid}&per_page=1000`,
+      `/api/v4/clients?f_groupId=${gid}&per_page=1000`,
       `/api/v4/groups/${gid}/members`,
-      `/api/v4/groups/${gid}/members?page=1&per_page=500`,
       `/api/v3/groups/${gid}/members`,
-      `/api/v3/groups/${gid}`,
-      `/api/v4/clients?group_id=${gid}&per_page=500`,
-      `/api/v4/group_memberships?group_id=${gid}`,
     ];
     for (const u of sources) {
       const { s, j } = await tryGet(u);
@@ -116,6 +114,12 @@ async function main() {
   });
   const byId = new Map(users.map(u => [u.id, u]));
   console.log(`Account roster: ${users.length} users.`);
+
+  const cd = await page.evaluate(async () => {
+    try { const r = await fetch('/api/v4/clients?per_page=2000', { headers: { Accept: 'application/json' } }); const j = await r.json(); const arr = j.client || j.clients || j.data || (Array.isArray(j) ? j : []); return { count: arr.length, sample: JSON.stringify(arr[0] || {}).slice(0, 700) }; } catch (e) { return { err: String(e) }; }
+  });
+  console.log(`Clients endpoint: count=${cd.count}. Sample: ${cd.sample || cd.err}`);
+
   await mkdir(new URL('../site/data/', import.meta.url), { recursive: true });
 
   for (const [name, id] of Object.entries(GROUPS)) {
