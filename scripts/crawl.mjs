@@ -146,7 +146,17 @@ async function main() {
   await page.locator('input[type="password"]').first().fill(PASSWORD);
   await page.locator('button[type="submit"], button:has-text("Log"), button:has-text("Sign")').first().click();
   await page.waitForLoadState('networkidle').catch(() => {});
-  await page.waitForTimeout(2500);
+  await page.waitForTimeout(3500);
+
+  // VERIFY LOGIN before doing anything else. An authenticated session returns
+  // an id from /api/v4/users/me; if we didn't log in, fail loudly instead of
+  // silently scraping logged-out pages and writing empty boards.
+  const me = await page.evaluate(async () => {
+    try { const r = await fetch('/api/v4/users/me', { headers: { Accept: 'application/json' } });
+          return r.ok ? (await r.json()).id : null; } catch { return null; }
+  });
+  if (!me) throw new Error('LOGIN FAILED — /api/v4/users/me returned no id. Check EXERCISE_EMAIL / EXERCISE_PASSWORD or a bot/MFA block. Aborting so existing data is preserved.');
+  console.log(`Logged in OK (user ${me}).`);
 
   await mkdir(new URL('../site/data/', import.meta.url), { recursive: true });
 
@@ -167,6 +177,14 @@ async function main() {
       return out;
     });
     console.log(`  report: ${rows.length} athletes`);
+
+    // SAFETY GUARD: never overwrite good data with an empty roster.
+    // If the report table didn't render (headless timing / login issue), skip
+    // this group so the last-good JSON stays live instead of going blank.
+    if (rows.length === 0) {
+      console.log(`  ! ${name}: 0 roster rows — skipping to preserve last-good data`);
+      continue;
+    }
 
     const members = [];
     const athleteRows = [];     // -> Supabase athletes
