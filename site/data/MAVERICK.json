@@ -2,7 +2,7 @@
   "group": "MAVERICK",
   "updated": "2026-09-16",
   "window": "last 45 days",
-  "total": 6,
+  "total": 5,
   "members": [
     {
       "n": "Jake Hart",
@@ -82,18 +82,11 @@
       "w": 0,
       "h": "—",
       "streak": 0
-    },
-    {
-      "n": "FTX Hybrid Athletics",
-      "w": 0,
-      "h": "—",
-      "streak": 0
     }
   ],
   "zerosNamed": [
     "Jeff Ball",
     "Ricky Osterloh",
-    "Clayton Marshall",
-    "FTX Hybrid Athletics"
+    "Clayton Marshall"
   ]
 }

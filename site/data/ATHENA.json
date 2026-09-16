@@ -2,7 +2,7 @@
   "group": "ATHENA",
   "updated": "2026-09-16",
   "window": "last 45 days",
-  "total": 11,
+  "total": 10,
   "members": [
     {
       "n": "Tammi Wright",
@@ -507,12 +507,6 @@
       "c": 2
     },
     {
-      "n": "FTX Hybrid Athletics",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
       "n": "Andrew Pour",
       "w": 0,
       "h": "—",
@@ -526,7 +520,6 @@
     }
   ],
   "zerosNamed": [
-    "FTX Hybrid Athletics",
     "Andrew Pour",
     "Francheska Duffey"
   ]

@@ -2,7 +2,7 @@
   "group": "HYROXONLINE",
   "updated": "2026-09-16",
   "window": "last 45 days",
-  "total": 13,
+  "total": 11,
   "members": [
     {
       "n": "Tracie Akerhielm",
@@ -74,13 +74,6 @@
         }
       ],
       "c": 152
-    },
-    {
-      "n": "Talon Smith",
-      "w": 21,
-      "h": "—",
-      "streak": 2,
-      "c": 42
     },
     {
       "n": "Chad Bradford",
@@ -186,12 +179,6 @@
       "streak": 0
     },
     {
-      "n": "FTX Hybrid Athletics",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
       "n": "Andrew Pour",
       "w": 0,
       "h": "—",
@@ -233,11 +220,11 @@
   "zerosNamed": [
     "Lindsey Carnett",
     "Austin Parthie",
-    "FTX Hybrid Athletics",
     "Andrew Pour",
     "Logan",
     "John Radzwilla",
     "Zack Cain",
-    "Max Camp"
+    "Max Camp",
+    "Clayton Marshall"
   ]
 }

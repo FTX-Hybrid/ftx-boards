@@ -2,7 +2,7 @@
   "group": "HYROX",
   "updated": "2026-09-16",
   "window": "last 45 days",
-  "total": 60,
+  "total": 55,
   "members": [
     {
       "n": "Tracie Akerhielm",
@@ -281,13 +281,6 @@
         }
       ],
       "c": 152
-    },
-    {
-      "n": "Talon Smith",
-      "w": 21,
-      "h": "—",
-      "streak": 2,
-      "c": 42
     },
     {
       "n": "Kyle Spencer",
@@ -596,13 +589,7 @@
       "c": 9
     },
     {
-      "n": "Jaime Smith",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Erika Ramon",
+      "n": "Zack Cain",
       "w": 0,
       "h": "—",
       "streak": 0
@@ -615,19 +602,19 @@
       "c": 2
     },
     {
-      "n": "FTX Hybrid Athletics",
+      "n": "Erika Ramon",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
+      "n": "Jaime Smith",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
       "n": "Taylor Andrews",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Zack Cain",
       "w": 0,
       "h": "—",
       "streak": 0
@@ -671,19 +658,6 @@
       "c": 1
     },
     {
-      "n": "Jay Marwan",
-      "w": 0,
-      "h": "—",
-      "streak": 0,
-      "c": 1
-    },
-    {
-      "n": "Lindsay Abstein",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
       "n": "Antonio Basalo",
       "w": 0,
       "h": "—",
@@ -696,12 +670,6 @@
       "h": "—",
       "streak": 0,
       "c": 1
-    },
-    {
-      "n": "Zack Cain",
-      "w": 0,
-      "h": "—",
-      "streak": 0
     },
     {
       "n": "Tracey Andrews",
@@ -869,13 +837,13 @@
     }
   ],
   "zerosNamed": [
-    "Jaime Smith",
-    "Erika Ramon",
-    "Jay Marwan",
-    "FTX Hybrid Athletics",
-    "Taylor Andrews",
     "Zack Cain",
+    "Jay Marwan",
+    "Erika Ramon",
+    "Jaime Smith",
+    "Taylor Andrews",
     "Mirella Garcia",
-    "Colin Hayek"
+    "Colin Hayek",
+    "Jennifer Smith"
   ]
 }

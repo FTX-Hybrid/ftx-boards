@@ -2,7 +2,7 @@
   "group": "HYBRID",
   "updated": "2026-09-16",
   "window": "last 45 days",
-  "total": 53,
+  "total": 50,
   "members": [
     {
       "n": "Aaron Philpot",
@@ -274,13 +274,6 @@
         }
       ],
       "c": 152
-    },
-    {
-      "n": "Talon Smith",
-      "w": 21,
-      "h": "—",
-      "streak": 2,
-      "c": 42
     },
     {
       "n": "Holden Foster",
@@ -577,12 +570,6 @@
       "streak": 0
     },
     {
-      "n": "FTX Hybrid Athletics",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
       "n": "Taylor Andrews",
       "w": 0,
       "h": "—",
@@ -637,12 +624,6 @@
     },
     {
       "n": "Jennifer Smith",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Zack Cain",
       "w": 0,
       "h": "—",
       "streak": 0
@@ -801,11 +782,11 @@
   "zerosNamed": [
     "Jaime Smith",
     "Erika Ramon",
-    "FTX Hybrid Athletics",
     "Taylor Andrews",
     "Mirella Garcia",
     "Jeffrey Bennett",
     "Merly",
-    "Gian Doloroso"
+    "Gian Doloroso",
+    "Antonio Basalo"
   ]
 }
