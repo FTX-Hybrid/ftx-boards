@@ -5,7 +5,7 @@ import { writeFile, mkdir } from 'node:fs/promises';
 const BASE = 'https://app.ftxhybrid.com';
 const EMAIL = process.env.EXERCISE_EMAIL;
 const PASSWORD = process.env.EXERCISE_PASSWORD;
-const DAYS = 45;
+const SINCE = 1767225600; // 2026-01-01 00:00 UTC — pull full workout history from Jan 1
 const TZ = 'America/Chicago';
 const SUPABASE_URL = (process.env.SUPABASE_URL || '').replace(/\/$/, '');
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || '';
@@ -36,6 +36,9 @@ function currentStreak(datesISO) {
   return streak;
 }
 
+// Resolve THIS group's member user-ids. Tries several sources, logs each, uses
+// the first that yields a sane (non-account-wide) id list.
+// Returns the raw active-member records for a group (from /api/v3/group_members).
 async function resolveMembers(page, gid) {
   return page.evaluate(async (gid) => {
     const log = [];
@@ -61,6 +64,8 @@ async function resolveMembers(page, gid) {
   }, gid);
 }
 
+// Keep a membership record only if it looks active. Any explicit end/removal/
+// inactive marker drops it; absence of markers = keep.
 function isActiveMember(m) {
   if (!m || typeof m !== 'object') return false;
   if (m.active === false || m.is_active === false || m.enabled === false) return false;
@@ -73,10 +78,10 @@ function memberUserId(m) {
   return String((m && (m.user_id || (m.user && m.user.id) || m.client_id || m.member_id || m.id)) || '');
 }
 
-async function pullAthlete(page, uid, days, tz) {
-  return page.evaluate(async ({ uid, days, tz }) => {
+async function pullAthlete(page, uid, since, tz) {
+  return page.evaluate(async ({ uid, since, tz }) => {
     const now = Math.floor(Date.now() / 1000);
-    const start = now - days * 24 * 3600;
+    const start = since;
     let logged = [];
     try {
       const cal = await (await fetch(`/api/v4/calendar?user_id=${uid}&object_type=logged_workout&start=${start}&end=${now}&time_zone=${encodeURIComponent(tz)}`, { headers: { Accept: 'application/json' } })).json();
@@ -101,8 +106,8 @@ async function pullAthlete(page, uid, days, tz) {
       if (moves.length) sessions.push({ date, title: (w.text || '').trim(), moves });
     }
     sessions.sort((a, b) => (a.date < b.date ? 1 : -1));
-    return { loggedDates: [...dates].sort(), recent: sessions[0] || null, prs: Object.values(prs).filter(p => p.weight > 0 || p.reps > 0).slice(0, 8), workouts: logged.length, rows };
-  }, { uid, days, tz });
+    return { loggedDates: [...dates].sort(), recent: sessions[0] || null, prs: Object.values(prs).filter(p => p.weight > 0 || p.reps > 0).slice(0, 8), workouts: dates.size, rows };
+  }, { uid, since, tz });
 }
 
 async function main() {
@@ -119,11 +124,20 @@ async function main() {
   if (!me) throw new Error('LOGIN FAILED — check EXERCISE_EMAIL / EXERCISE_PASSWORD.');
   console.log(`Logged in OK (user ${me}).`);
 
+  // Account roster: everyone + their ids/names, one call.
   const users = await page.evaluate(async () => {
     try { const r = await fetch('/api/v4/users?fetch_all=true', { headers: { Accept: 'application/json' } }); const j = await r.json(); const arr = Array.isArray(j) ? j : (j.users || j.data || []); return arr.map(u => ({ id: String(u.id), first: u.first_name || '', last: u.last_name || '' })); } catch { return []; }
   });
   const byId = new Map(users.map(u => [u.id, u]));
   console.log(`Account roster: ${users.length} users.`);
+
+  // Diagnostic: show one client record so we can see how clients tie to groups.
+  const cd = await page.evaluate(async () => {
+    try { const r = await fetch('/api/v4/clients?per_page=2000', { headers: { Accept: 'application/json' } }); const j = await r.json(); const arr = j.client || j.clients || j.data || (Array.isArray(j) ? j : []); return { count: arr.length, sample: JSON.stringify(arr[0] || {}).slice(0, 700) }; } catch (e) { return { err: String(e) }; }
+  });
+  console.log(`Clients endpoint: count=${cd.count}. Sample: ${cd.sample || cd.err}`);
+
+  const perfCache = new Map(); // uid -> perf, so people in multiple groups pull once
   await mkdir(new URL('../site/data/', import.meta.url), { recursive: true });
 
   for (const [name, id] of Object.entries(GROUPS)) {
@@ -145,7 +159,8 @@ async function main() {
       const m = { n: `${u.first} ${u.last}`.trim(), w: 0, h: '—', uid };
       if (Number.isFinite(uid)) athleteRows.push({ exercise_user_id: uid, first_name: u.first, last_name: u.last, grp: name });
       try {
-        const perf = await pullAthlete(page, m.uid, DAYS, TZ);
+        let perf = perfCache.get(String(m.uid));
+        if (perf === undefined) { perf = await pullAthlete(page, m.uid, SINCE, TZ); perfCache.set(String(m.uid), perf); }
         if (perf) {
           m.w = perf.workouts; m.streak = currentStreak(perf.loggedDates);
           if (perf.recent) m.detail = perf.recent;
@@ -158,9 +173,10 @@ async function main() {
       console.log(`  ${m.n}: ${m.w} logged, streak ${m.streak ?? 0}`);
     }
     members.sort((a, b) => b.w - a.w);
+    // de-dupe repeated people (same name, multiple accounts) — keep the most active
     const seen = new Set();
     const deduped = members.filter(m => { const k = m.n.trim().toLowerCase(); if (!k || seen.has(k)) return false; seen.add(k); return true; });
-    const payload = { group: name, updated: new Date().toISOString().slice(0, 10), window: 'last 45 days', total: deduped.length, members: deduped, zerosNamed: deduped.filter(m => m.w === 0).map(m => m.n).slice(0, 8) };
+    const payload = { group: name, updated: new Date().toISOString().slice(0, 10), window: 'since Jan 1, 2026', total: deduped.length, members: deduped, zerosNamed: deduped.filter(m => m.w === 0).map(m => m.n).slice(0, 8) };
     await writeFile(new URL(`../site/data/${name}.json`, import.meta.url), JSON.stringify(payload, null, 2));
     console.log(`  wrote ${deduped.length} members (${deduped.filter(m => m.w > 0).length} logging)`);
     if (SB_ON) { await sbUpsert('athletes', athleteRows, 'exercise_user_id'); await sbUpsert('results', resultRows, 'exercise_user_id,ex_workout_id,exercise_id'); console.log(`  supabase: ${athleteRows.length} athletes, ${resultRows.length} result rows`); }
