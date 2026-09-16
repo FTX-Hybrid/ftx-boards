@@ -1,28 +1,8 @@
 {
   "group": "ATHENA",
-  "updated": "2026-09-15",
-  "window": "Aug 16 – Sep 15, 2026",
-  "total": 7,
-  "members": [
-    {"n": "Jennifer Ward", "w": 32, "h": "32h", "c": 37},
-    {"n": "Tammi Wright", "w": 28, "h": "26h", "c": 130},
-    {"n": "Martha Samaniego", "w": 23, "h": "20h"},
-    {"n": "Danielle Rueter", "w": 17, "h": "17h"},
-    {"n": "Shonna Andersen", "w": 10, "h": "9h", "c": 10,
-      "detail": {"title": "Assessment Day 2: Strength + 1RM", "date": "2026-08-25",
-        "moves": [
-          {"name": "Barbell Back Squat", "reps": 23, "weight": 2335},
-          {"name": "Deadlift", "reps": 25, "weight": 2375},
-          {"name": "Military Press", "reps": 26, "weight": 855},
-          {"name": "Pull-Up", "reps": 15, "weight": 0},
-          {"name": "Bird Dog", "reps": 30, "weight": 0}
-        ]},
-      "prs": [
-        {"name": "Deadlift", "reps": 25, "weight": 2375, "date": "2026-08-25"},
-        {"name": "Barbell Back Squat", "reps": 23, "weight": 2335, "date": "2026-08-25"}
-      ]},
-    {"n": "Eva Martinez", "w": 2, "h": "2h"},
-    {"n": "Francheska Duffey", "w": 0, "h": "—"}
-  ],
+  "updated": "2026-09-16",
+  "window": "last 30 days",
+  "total": 0,
+  "members": [],
   "zerosNamed": []
 }

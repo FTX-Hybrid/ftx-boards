@@ -1,22 +1,8 @@
 {
   "group": "HYROX",
-  "updated": "2026-09-15",
-  "window": "Aug 16 – Sep 15, 2026",
-  "total": 55,
-  "members": [
-    {"n": "Tracie Akerhielm", "w": 46, "h": "28h", "c": 217},
-    {"n": "Lindsay Abstein", "w": 37, "h": "30h", "c": 119},
-    {"n": "Jennifer Ward", "w": 33, "h": "33h", "c": 37},
-    {"n": "Aaron Philpot", "w": 33, "h": "25h", "c": 172},
-    {"n": "Jerrett Shannon", "w": 31, "h": "22h", "c": 201},
-    {"n": "Lillie Johnston", "w": 31, "h": "17h", "c": 132},
-    {"n": "Tammi Wright", "w": 28, "h": "26h", "c": 130},
-    {"n": "Holden Foster", "w": 18, "h": "11h"},
-    {"n": "Kyle Spencer", "w": 12, "h": "12h"},
-    {"n": "Talon Smith", "w": 11, "h": "8h", "c": 151},
-    {"n": "Nick Gracia", "w": 7, "h": "4h"},
-    {"n": "Justin Rothrock", "w": 4, "h": "4h"},
-    {"n": "Veronica Hardy", "w": 1, "h": "1h"}
-  ],
-  "zerosNamed": ["Clayton Marshall", "Jaci Caceres", "Sandy Luna", "Colin Hayek", "Katie Wylie", "Gian Doloroso"]
+  "updated": "2026-09-16",
+  "window": "last 30 days",
+  "total": 0,
+  "members": [],
+  "zerosNamed": []
 }

@@ -1,23 +1,8 @@
 {
   "group": "HYROXONLINE",
-  "label": "Hyrox Online",
-  "updated": "2026-09-15",
-  "window": "Aug 16 – Sep 15, 2026",
-  "total": 13,
-  "members": [
-    {"n": "Tracie Akerhielm", "w": 46, "h": "28h", "c": 217},
-    {"n": "Talon Smith", "w": 11, "h": "8h", "c": 151},
-    {"n": "Chad Bradford", "w": 10, "h": "10h"},
-    {"n": "Jon Garcia", "w": 1, "h": "1h"},
-    {"n": "Clayton Marshall", "w": 0, "h": "—"},
-    {"n": "Max Camp", "w": 0, "h": "—"},
-    {"n": "Zack Cain", "w": 0, "h": "—"},
-    {"n": "John Radzwilla", "w": 0, "h": "—"},
-    {"n": "Logan", "w": 0, "h": "—"},
-    {"n": "Austin Parthie", "w": 0, "h": "—"},
-    {"n": "Lindsey Carnett", "w": 0, "h": "—"},
-    {"n": "Meredith Legard", "w": 0, "h": "—"},
-    {"n": "Beau Ruiz", "w": 0, "h": "—"}
-  ],
-  "zerosNamed": ["Clayton Marshall", "Max Camp", "John Radzwilla", "Austin Parthie", "Lindsey Carnett", "Zack Cain", "Logan", "Meredith Legard"]
+  "updated": "2026-09-16",
+  "window": "last 30 days",
+  "total": 0,
+  "members": [],
+  "zerosNamed": []
 }
