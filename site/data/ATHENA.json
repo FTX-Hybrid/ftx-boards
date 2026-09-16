@@ -43,6 +43,103 @@
           }
         ]
       },
+      "hist": [
+        {
+          "date": "2026-04-07",
+          "title": "Hyrox 4|7 - Track Day",
+          "moves": [
+            {
+              "name": "Warm Up",
+              "id": 1011784,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Hyrox Running",
+              "id": 1011785,
+              "reps": 6,
+              "weight": 0,
+              "time": 1800
+            },
+            {
+              "name": "Worlds Work",
+              "id": 1014447,
+              "reps": 1,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Cool Down",
+              "id": 1014471,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-04-06",
+          "title": "Hyrox 4|6 - New Block",
+          "moves": [
+            {
+              "name": "Warm Up",
+              "id": 1011784,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Bench Press",
+              "id": 993209,
+              "reps": 1,
+              "weight": 125,
+              "time": 0
+            },
+            {
+              "name": "Hyrox AMRAP",
+              "id": 1011780,
+              "reps": 0,
+              "weight": 0,
+              "time": 600
+            },
+            {
+              "name": "Hyrox Metcon",
+              "id": 1014489,
+              "reps": 110,
+              "weight": 0,
+              "time": 52800
+            },
+            {
+              "name": "Worlds Work",
+              "id": 1014447,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Cool Down",
+              "id": 1014471,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-04-05",
+          "title": "Hyrox Sunday Run",
+          "moves": [
+            {
+              "name": "Hyrox Running",
+              "id": 1011785,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            }
+          ]
+        }
+      ],
       "prs": [
         {
           "name": "Bench Press",
@@ -110,6 +207,68 @@
           }
         ]
       },
+      "hist": [
+        {
+          "date": "2026-04-07",
+          "title": "Hyrox 4|7 - Track Day",
+          "moves": [
+            {
+              "name": "Warm Up",
+              "id": 1011784,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Hyrox Running",
+              "id": 1011785,
+              "reps": 0,
+              "weight": 0,
+              "time": 2022
+            },
+            {
+              "name": "Worlds Work",
+              "id": 1014447,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Cool Down",
+              "id": 1014471,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-02-22",
+          "title": "2/22/2026",
+          "moves": [
+            {
+              "name": "Running",
+              "id": 993286,
+              "reps": 0,
+              "weight": 0,
+              "time": 5700
+            }
+          ]
+        },
+        {
+          "date": "2026-02-22",
+          "title": "2/22/2026",
+          "moves": [
+            {
+              "name": "Running",
+              "id": 993286,
+              "reps": 0,
+              "weight": 0,
+              "time": 5700
+            }
+          ]
+        }
+      ],
       "c": 40
     },
     {
@@ -137,6 +296,62 @@
           }
         ]
       },
+      "hist": [
+        {
+          "date": "2026-01-07",
+          "title": "Week 6 Day 2",
+          "moves": [
+            {
+              "name": "Warm Up",
+              "id": 1011784,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Running",
+              "id": 993286,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            }
+          ]
+        },
+        {
+          "date": "2026-01-07",
+          "title": "Week 6 Day 2",
+          "moves": [
+            {
+              "name": "Warm Up",
+              "id": 1011784,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Running",
+              "id": 993286,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Worlds Work",
+              "id": 1014447,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            },
+            {
+              "name": "Cool Down",
+              "id": 1014471,
+              "reps": 0,
+              "weight": 0,
+              "time": 0
+            }
+          ]
+        }
+      ],
       "c": 42
     },
     {
