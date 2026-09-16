@@ -36,30 +36,41 @@ function currentStreak(datesISO) {
   return streak;
 }
 
-async function resolveMemberIds(page, gid) {
+async function resolveMembers(page, gid) {
   return page.evaluate(async (gid) => {
     const log = [];
     const tryGet = async (u) => { try { const r = await fetch(u, { headers: { Accept: 'application/json' } }); const j = r.ok ? await r.json().catch(() => null) : null; return { s: r.status, j }; } catch (e) { return { s: 'ERR', j: null }; } };
-    const extractIds = (j) => {
+    const getArr = (j) => {
       if (!j) return null;
-      const arrays = [j.group_members, j.member_ids, j.user_ids, j.client_ids, j.members, j.users, j.clients, j.client, j.data, Array.isArray(j) ? j : null];
-      for (const a of arrays) if (Array.isArray(a) && a.length) return a.map(x => (x && typeof x === 'object') ? (x.user_id || (x.user && x.user.id) || x.client_id || x.member_id || x.id) : x).filter(Boolean).map(String);
+      const arrays = [j.group_members, j.members, j.data, j.clients, j.client, Array.isArray(j) ? j : null];
+      for (const a of arrays) if (Array.isArray(a) && a.length) return a;
       return null;
     };
     const sources = [
       `/api/v3/group_members?group_id=${gid}&fetch_all=true`,
       `/api/v3/group_members?f_groupId=${gid}&fetch_all=true`,
       `/api/v3/group_members?group_id=${gid}&per_page=1000`,
-      `/api/v4/group_members?group_id=${gid}&fetch_all=true`,
     ];
     for (const u of sources) {
       const { s, j } = await tryGet(u);
-      const ids = extractIds(j);
-      log.push(`${u.split('?')[0].slice(-40)} -> ${s}${ids ? ` ids=${ids.length}` : (j && !Array.isArray(j) ? ` keys=[${Object.keys(j).slice(0, 12).join(',')}]` : '')}`);
-      if (ids && ids.length && ids.length < 1000) return { ids: [...new Set(ids)], log };
+      const arr = getArr(j);
+      log.push(`${u.split('?')[0].slice(-30)} -> ${s}${arr ? ` recs=${arr.length}` : ''}`);
+      if (arr && arr.length && arr.length < 1000) return { recs: arr, log };
     }
-    return { ids: null, log };
+    return { recs: null, log };
   }, gid);
+}
+
+function isActiveMember(m) {
+  if (!m || typeof m !== 'object') return false;
+  if (m.active === false || m.is_active === false || m.enabled === false) return false;
+  if (m.ended_at || m.deactivated_at || m.removed_at || m.deleted_at || m.left_at || m.cancelled_at || m.canceled_at || m.expired_at || m.archived_at) return false;
+  const st = String(m.status || m.membership_status || m.member_status || m.state || '').toLowerCase();
+  if (st && ['inactive', 'ended', 'cancelled', 'canceled', 'removed', 'declined', 'expired', 'deleted', 'archived', 'pending', 'invited'].includes(st)) return false;
+  return true;
+}
+function memberUserId(m) {
+  return String((m && (m.user_id || (m.user && m.user.id) || m.client_id || m.member_id || m.id)) || '');
 }
 
 async function pullAthlete(page, uid, days, tz) {
@@ -117,11 +128,15 @@ async function main() {
 
   for (const [name, id] of Object.entries(GROUPS)) {
     console.log(`\n=== ${name} (group ${id}) ===`);
-    const { ids, log } = await resolveMemberIds(page, id);
+    const { recs, log } = await resolveMembers(page, id);
     for (const l of log) console.log(`   ${l}`);
-    if (!ids) { console.log(`  ! ${name}: could not resolve a per-group member list — skipping (preserving last-good data)`); continue; }
-    const roster = ids.map(uid => byId.get(String(uid))).filter(Boolean).filter(u => u.first || u.last);
-    console.log(`  ${name}: ${roster.length} members`);
+    if (!recs) { console.log(`  ! ${name}: could not resolve members — skipping (preserving last-good data)`); continue; }
+    console.log(`   member fields: [${Object.keys(recs[0]).join(', ')}]`);
+    const active = recs.filter(isActiveMember);
+    const ids = [...new Set(active.map(memberUserId).filter(Boolean))];
+    const roster = ids.map(uid => byId.get(uid)).filter(Boolean)
+      .filter(u => (u.first || u.last) && !/ftx hybrid|hybrid athletics/i.test(`${u.first} ${u.last}`.trim()));
+    console.log(`  ${name}: ${recs.length} total / ${active.length} active / ${roster.length} on board`);
     if (roster.length === 0 || roster.length >= 1000) { console.log(`  ! ${name}: roster size ${roster.length} looks wrong — skipping`); continue; }
 
     const members = [], athleteRows = [], resultRows = [];
@@ -143,9 +158,11 @@ async function main() {
       console.log(`  ${m.n}: ${m.w} logged, streak ${m.streak ?? 0}`);
     }
     members.sort((a, b) => b.w - a.w);
-    const payload = { group: name, updated: new Date().toISOString().slice(0, 10), window: 'last 45 days', total: members.length, members, zerosNamed: members.filter(m => m.w === 0).map(m => m.n).slice(0, 8) };
+    const seen = new Set();
+    const deduped = members.filter(m => { const k = m.n.trim().toLowerCase(); if (!k || seen.has(k)) return false; seen.add(k); return true; });
+    const payload = { group: name, updated: new Date().toISOString().slice(0, 10), window: 'last 45 days', total: deduped.length, members: deduped, zerosNamed: deduped.filter(m => m.w === 0).map(m => m.n).slice(0, 8) };
     await writeFile(new URL(`../site/data/${name}.json`, import.meta.url), JSON.stringify(payload, null, 2));
-    console.log(`  wrote ${members.length} members (${members.filter(m => m.w > 0).length} logging)`);
+    console.log(`  wrote ${deduped.length} members (${deduped.filter(m => m.w > 0).length} logging)`);
     if (SB_ON) { await sbUpsert('athletes', athleteRows, 'exercise_user_id'); await sbUpsert('results', resultRows, 'exercise_user_id,ex_workout_id,exercise_id'); console.log(`  supabase: ${athleteRows.length} athletes, ${resultRows.length} result rows`); }
   }
   await browser.close();
