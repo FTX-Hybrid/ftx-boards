@@ -2,11 +2,11 @@ name: Nightly FTX data refresh
 
 on:
   schedule:
-   - cron: '45 0 * * *'   # 00:45 UTC = 7:45 PM CDT (adjust for standard time if needed)
+    - cron: '45 0 * * *'   # 00:45 UTC = 7:45 PM CDT (6:45 PM CST in winter — GitHub cron is UTC-only)
   workflow_dispatch: {}      # lets you run it manually from the Actions tab
 
 permissions:
-  contents: write            # only needs to commit refreshed data; deploy.yml handles Pages
+  contents: write            # commits refreshed data + rebuilt pages; deploy.yml handles Pages
 
 jobs:
   refresh:
@@ -27,13 +27,18 @@ jobs:
         env:
           EXERCISE_EMAIL: ${{ secrets.EXERCISE_EMAIL }}
           EXERCISE_PASSWORD: ${{ secrets.EXERCISE_PASSWORD }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: npm run crawl
 
-      - name: Commit refreshed data
+      - name: Rebuild isolated group pages from fresh data
+        run: node scripts/build-pages.mjs
+
+      - name: Commit refreshed data + pages
         run: |
           git config user.name  "ftx-board-bot"
           git config user.email "bot@ftxhybrid.local"
-          git add site/data/*.json
+          git add site/data/*.json site/*.html
           git commit -m "nightly data refresh" || echo "no changes"
           git push || echo "nothing to push"
       # No Pages deploy here — the push above triggers deploy.yml, which publishes site/.
