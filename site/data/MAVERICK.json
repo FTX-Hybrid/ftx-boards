@@ -2,44 +2,98 @@
   "group": "MAVERICK",
   "updated": "2026-09-16",
   "window": "last 45 days",
-  "total": 5,
+  "total": 6,
   "members": [
     {
-      "n": "Justin Jircik",
+      "n": "Jake Hart",
+      "w": 105,
+      "h": "—",
+      "streak": 7,
+      "detail": {
+        "date": "2026-09-03",
+        "title": "Squat + Lower Body + Heavy Sled",
+        "moves": [
+          {
+            "name": "Hyrox Running",
+            "id": 1011785,
+            "reps": 0,
+            "weight": 0,
+            "time": 1800
+          },
+          {
+            "name": "Single Leg Deadlift",
+            "id": 1025316,
+            "reps": 65,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Barbell Back Squat",
+            "id": 993166,
+            "reps": 25,
+            "weight": 5375,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Barbell Back Squat",
+          "reps": 25,
+          "weight": 5375,
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Running",
+          "reps": 2,
+          "weight": 0,
+          "date": "2026-08-04"
+        },
+        {
+          "name": "Single Leg Deadlift",
+          "reps": 65,
+          "weight": 0,
+          "date": "2026-09-03"
+        }
+      ],
+      "c": 472
+    },
+    {
+      "n": "Talon Smith",
+      "w": 21,
+      "h": "—",
+      "streak": 2,
+      "c": 42
+    },
+    {
+      "n": "Jeff Ball",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Becky Hennesy",
+      "n": "Ricky Osterloh",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Diana Zendejas",
+      "n": "Clayton Marshall",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Logan Rogers",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Aidee Geist",
+      "n": "FTX Hybrid Athletics",
       "w": 0,
       "h": "—",
       "streak": 0
     }
   ],
   "zerosNamed": [
-    "Justin Jircik",
-    "Becky Hennesy",
-    "Diana Zendejas",
-    "Logan Rogers",
-    "Aidee Geist"
+    "Jeff Ball",
+    "Ricky Osterloh",
+    "Clayton Marshall",
+    "FTX Hybrid Athletics"
   ]
 }

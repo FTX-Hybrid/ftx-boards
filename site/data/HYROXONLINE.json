@@ -2,44 +2,242 @@
   "group": "HYROXONLINE",
   "updated": "2026-09-16",
   "window": "last 45 days",
-  "total": 5,
+  "total": 13,
   "members": [
     {
-      "n": "Justin Jircik",
+      "n": "Tracie Akerhielm",
+      "w": 74,
+      "h": "—",
+      "streak": 2,
+      "c": 219
+    },
+    {
+      "n": "Talon Smith",
+      "w": 24,
+      "h": "—",
+      "streak": 2,
+      "detail": {
+        "date": "2026-08-27",
+        "title": "8/27 Engine - 30 Minute EMOM",
+        "moves": [
+          {
+            "name": "Hybrid Metcon",
+            "id": 1018619,
+            "reps": 1,
+            "weight": 35,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Kettlebell Swing",
+          "reps": 60,
+          "weight": 3180,
+          "date": "2026-08-13"
+        },
+        {
+          "name": "Romanian Deadlift",
+          "reps": 30,
+          "weight": 4050,
+          "date": "2026-08-13"
+        },
+        {
+          "name": "Bulgarian Dumbbell Split Squat",
+          "reps": 30,
+          "weight": 0,
+          "date": "2026-08-13"
+        },
+        {
+          "name": "One Leg Elevated Calf Raise",
+          "reps": 45,
+          "weight": 0,
+          "date": "2026-08-13"
+        },
+        {
+          "name": "Hyrox Running",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-08-09"
+        },
+        {
+          "name": "Hybrid Metcon",
+          "reps": 1,
+          "weight": 35,
+          "date": "2026-08-27"
+        },
+        {
+          "name": "Sandbag Lunges",
+          "reps": 80,
+          "weight": 0,
+          "date": "2026-08-13"
+        }
+      ],
+      "c": 152
+    },
+    {
+      "n": "Talon Smith",
+      "w": 21,
+      "h": "—",
+      "streak": 2,
+      "c": 42
+    },
+    {
+      "n": "Chad Bradford",
+      "w": 9,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-09-14",
+        "title": "Get in the distance!",
+        "moves": [
+          {
+            "name": "Hyrox Running",
+            "id": 1011785,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Tricep Dip",
+            "id": 993344,
+            "reps": 100,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Push Press",
+            "id": 993258,
+            "reps": 1,
+            "weight": 135,
+            "time": 0
+          },
+          {
+            "name": "Hybrid Metcon",
+            "id": 1018619,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Front Squat",
+          "reps": 25,
+          "weight": 2375,
+          "date": "2026-09-10"
+        },
+        {
+          "name": "Hammer Curl",
+          "reps": 50,
+          "weight": 1900,
+          "date": "2026-09-07"
+        },
+        {
+          "name": "Bulgarian Dumbbell Split Squat",
+          "reps": 30,
+          "weight": 750,
+          "date": "2026-09-10"
+        },
+        {
+          "name": "Incline Dumbbell Bench Press",
+          "reps": 40,
+          "weight": 2480,
+          "date": "2026-09-07"
+        },
+        {
+          "name": "Push Press",
+          "reps": 1,
+          "weight": 135,
+          "date": "2026-09-14"
+        },
+        {
+          "name": "Rowing",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-09-01"
+        },
+        {
+          "name": "Tricep Dip",
+          "reps": 100,
+          "weight": 0,
+          "date": "2026-09-14"
+        },
+        {
+          "name": "Hyrox Metcon",
+          "reps": 4,
+          "weight": 240,
+          "date": "2026-09-12"
+        }
+      ],
+      "c": 11
+    },
+    {
+      "n": "Lindsey Carnett",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Becky Hennesy",
+      "n": "Austin Parthie",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Diana Zendejas",
+      "n": "FTX Hybrid Athletics",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Logan Rogers",
+      "n": "Andrew Pour",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Aidee Geist",
+      "n": "Logan",
       "w": 0,
       "h": "—",
       "streak": 0
+    },
+    {
+      "n": "John Radzwilla",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
+      "n": "Zack Cain",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
+      "n": "Max Camp",
+      "w": 0,
+      "h": "—",
+      "streak": 0,
+      "c": 2
+    },
+    {
+      "n": "Clayton Marshall",
+      "w": 0,
+      "h": "—",
+      "streak": 0,
+      "c": 10
     }
   ],
   "zerosNamed": [
-    "Justin Jircik",
-    "Becky Hennesy",
-    "Diana Zendejas",
-    "Logan Rogers",
-    "Aidee Geist"
+    "Lindsey Carnett",
+    "Austin Parthie",
+    "FTX Hybrid Athletics",
+    "Andrew Pour",
+    "Logan",
+    "John Radzwilla",
+    "Zack Cain",
+    "Max Camp"
   ]
 }

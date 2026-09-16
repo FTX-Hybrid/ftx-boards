@@ -2,44 +2,532 @@
   "group": "ATHENA",
   "updated": "2026-09-16",
   "window": "last 45 days",
-  "total": 5,
+  "total": 11,
   "members": [
     {
-      "n": "Justin Jircik",
+      "n": "Tammi Wright",
+      "w": 42,
+      "h": "—",
+      "streak": 2,
+      "detail": {
+        "date": "2026-09-15",
+        "title": "Intervals",
+        "moves": [
+          {
+            "name": "Running",
+            "id": 993286,
+            "reps": 0,
+            "weight": 0,
+            "time": 2100
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Dumbbell Bench Press",
+          "reps": 24,
+          "weight": 680,
+          "date": "2026-09-14"
+        },
+        {
+          "name": "Barbell Back Squat",
+          "reps": 21,
+          "weight": 2540,
+          "date": "2026-09-11"
+        },
+        {
+          "name": "Push-Up",
+          "reps": 45,
+          "weight": 0,
+          "date": "2026-09-14"
+        },
+        {
+          "name": "Medicine Ball Russian Twist",
+          "reps": 15,
+          "weight": 0,
+          "date": "2026-09-11"
+        },
+        {
+          "name": "Deadlift",
+          "reps": 4,
+          "weight": 780,
+          "date": "2026-09-11"
+        },
+        {
+          "name": "Hammer Curl",
+          "reps": 30,
+          "weight": 550,
+          "date": "2026-09-14"
+        },
+        {
+          "name": "Behind Head Skull Crusher",
+          "reps": 30,
+          "weight": 600,
+          "date": "2026-09-14"
+        },
+        {
+          "name": "Box Jump",
+          "reps": 15,
+          "weight": 0,
+          "date": "2026-09-11"
+        }
+      ],
+      "c": 131
+    },
+    {
+      "n": "Jennifer Ward",
+      "w": 31,
+      "h": "—",
+      "streak": 1,
+      "detail": {
+        "date": "2026-09-15",
+        "title": "Intervals",
+        "moves": [
+          {
+            "name": "Running",
+            "id": 993286,
+            "reps": 1,
+            "weight": 0,
+            "time": 3000
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Dumbbell Bench Press",
+          "reps": 24,
+          "weight": 1320,
+          "date": "2026-09-08"
+        },
+        {
+          "name": "Bird Dog",
+          "reps": 30,
+          "weight": 0,
+          "date": "2026-08-25"
+        },
+        {
+          "name": "Romanian Deadlift",
+          "reps": 24,
+          "weight": 0,
+          "date": "2026-08-30"
+        },
+        {
+          "name": "Barbell Back Squat",
+          "reps": 23,
+          "weight": 1830,
+          "date": "2026-09-05"
+        },
+        {
+          "name": "Push-Up",
+          "reps": 1,
+          "weight": 0,
+          "date": "2026-09-08"
+        },
+        {
+          "name": "Walking Bodyweight Lunge",
+          "reps": 30,
+          "weight": 0,
+          "date": "2026-08-30"
+        },
+        {
+          "name": "Medicine Ball Russian Twist",
+          "reps": 15,
+          "weight": 270,
+          "date": "2026-09-10"
+        },
+        {
+          "name": "Bent-Over Row",
+          "reps": 32,
+          "weight": 1600,
+          "date": "2026-09-01"
+        }
+      ],
+      "c": 40
+    },
+    {
+      "n": "Talon Smith",
+      "w": 21,
+      "h": "—",
+      "streak": 2,
+      "c": 42
+    },
+    {
+      "n": "Danielle Rueter",
+      "w": 19,
+      "h": "—",
+      "streak": 4,
+      "detail": {
+        "date": "2026-09-15",
+        "title": "Upper Body Strength + Power",
+        "moves": [
+          {
+            "name": "Push-Up",
+            "id": 993186,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Push Press",
+            "id": 993258,
+            "reps": 23,
+            "weight": 1610,
+            "time": 0
+          },
+          {
+            "name": "Gorilla Row",
+            "id": 1095528,
+            "reps": 33,
+            "weight": 1155,
+            "time": 0
+          },
+          {
+            "name": "Dumbbell Bench Press",
+            "id": 993134,
+            "reps": 30,
+            "weight": 900,
+            "time": 0
+          },
+          {
+            "name": "Wide-Grip Lat Pulldown",
+            "id": 993271,
+            "reps": 32,
+            "weight": 3310,
+            "time": 0
+          },
+          {
+            "name": "Hammer Curl",
+            "id": 993219,
+            "reps": 28,
+            "weight": 420,
+            "time": 0
+          },
+          {
+            "name": "Behind Head Skull Crusher",
+            "id": 993221,
+            "reps": 35,
+            "weight": 700,
+            "time": 0
+          },
+          {
+            "name": "Slam ball",
+            "id": 1056039,
+            "reps": 18,
+            "weight": 720,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Dumbbell Bench Press",
+          "reps": 30,
+          "weight": 900,
+          "date": "2026-09-15"
+        },
+        {
+          "name": "Bird Dog",
+          "reps": 30,
+          "weight": 0,
+          "date": "2026-08-28"
+        },
+        {
+          "name": "Hanging Knee Raise",
+          "reps": 59,
+          "weight": 0,
+          "date": "2026-09-10"
+        },
+        {
+          "name": "Barbell Back Squat",
+          "reps": 0,
+          "weight": 1060,
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Push-Up",
+          "reps": 43,
+          "weight": 0,
+          "date": "2026-09-08"
+        },
+        {
+          "name": "Medicine Ball Russian Twist",
+          "reps": 15,
+          "weight": 225,
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Bent-Over Row",
+          "reps": 35,
+          "weight": 2800,
+          "date": "2026-09-08"
+        },
+        {
+          "name": "Deadlift",
+          "reps": 20,
+          "weight": 3300,
+          "date": "2026-09-03"
+        }
+      ],
+      "c": 20
+    },
+    {
+      "n": "Martha Samaniego",
+      "w": 17,
+      "h": "—",
+      "streak": 2,
+      "detail": {
+        "date": "2026-09-15",
+        "title": "Easy Zone 2",
+        "moves": [
+          {
+            "name": "Running",
+            "id": 993286,
+            "reps": 1,
+            "weight": 0,
+            "time": 3600
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Dumbbell Bench Press",
+          "reps": 24,
+          "weight": 800,
+          "date": "2026-09-09"
+        },
+        {
+          "name": "Bird Dog",
+          "reps": 30,
+          "weight": 0,
+          "date": "2026-08-28"
+        },
+        {
+          "name": "Hanging Knee Raise",
+          "reps": 33,
+          "weight": 0,
+          "date": "2026-09-07"
+        },
+        {
+          "name": "Barbell Back Squat",
+          "reps": 30,
+          "weight": 3310,
+          "date": "2026-09-07"
+        },
+        {
+          "name": "Push-Up",
+          "reps": 40,
+          "weight": 0,
+          "date": "2026-09-14"
+        },
+        {
+          "name": "Medicine Ball Russian Twist",
+          "reps": 15,
+          "weight": 150,
+          "date": "2026-09-07"
+        },
+        {
+          "name": "Bent-Over Row",
+          "reps": 32,
+          "weight": 2080,
+          "date": "2026-08-31"
+        },
+        {
+          "name": "Deadlift",
+          "reps": 38,
+          "weight": 4890,
+          "date": "2026-09-07"
+        }
+      ],
+      "c": 24
+    },
+    {
+      "n": "Shonna Andersen",
+      "w": 8,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-09-03",
+        "title": "Strength and Power",
+        "moves": [
+          {
+            "name": "mini band lateral walk",
+            "id": 1143577,
+            "reps": 20,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Barbell Back Squat",
+            "id": 993166,
+            "reps": 32,
+            "weight": 3280,
+            "time": 0
+          },
+          {
+            "name": "Deadlift",
+            "id": 993213,
+            "reps": 32,
+            "weight": 2560,
+            "time": 0
+          },
+          {
+            "name": "Bulgarian Dumbbell Split Squat",
+            "id": 993226,
+            "reps": 24,
+            "weight": 440,
+            "time": 0
+          },
+          {
+            "name": "Hip Thrusts",
+            "id": 1108556,
+            "reps": 40,
+            "weight": 4200,
+            "time": 0
+          },
+          {
+            "name": "Box Jump",
+            "id": 993225,
+            "reps": 15,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Pogos ",
+            "id": 1143576,
+            "reps": 30,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Plank + Shoulder Tap",
+            "id": 1108555,
+            "reps": 0,
+            "weight": 0,
+            "time": 0
+          },
+          {
+            "name": "Medicine Ball Russian Twist",
+            "id": 993201,
+            "reps": 15,
+            "weight": 0,
+            "time": 0
+          }
+        ]
+      },
+      "prs": [
+        {
+          "name": "Dumbbell Bench Press",
+          "reps": 24,
+          "weight": 880,
+          "date": "2026-09-01"
+        },
+        {
+          "name": "Bird Dog",
+          "reps": 30,
+          "weight": 0,
+          "date": "2026-08-25"
+        },
+        {
+          "name": "Romanian Deadlift",
+          "reps": 24,
+          "weight": 1500,
+          "date": "2026-08-26"
+        },
+        {
+          "name": "Barbell Back Squat",
+          "reps": 32,
+          "weight": 3280,
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Push-Up",
+          "reps": 15,
+          "weight": 0,
+          "date": "2026-09-01"
+        },
+        {
+          "name": "Walking Bodyweight Lunge",
+          "reps": 30,
+          "weight": 0,
+          "date": "2026-08-26"
+        },
+        {
+          "name": "Medicine Ball Russian Twist",
+          "reps": 15,
+          "weight": 0,
+          "date": "2026-09-03"
+        },
+        {
+          "name": "Bent-Over Row",
+          "reps": 32,
+          "weight": 1760,
+          "date": "2026-09-01"
+        }
+      ],
+      "c": 10
+    },
+    {
+      "n": "Eva Martinez",
+      "w": 3,
+      "h": "—",
+      "streak": 1,
+      "detail": {
+        "date": "2026-09-15",
+        "title": "Easy Zone 2",
+        "moves": [
+          {
+            "name": "Running",
+            "id": 993286,
+            "reps": 0,
+            "weight": 0,
+            "time": 3600
+          }
+        ]
+      },
+      "c": 3
+    },
+    {
+      "n": "Jaci Caceres",
+      "w": 2,
+      "h": "—",
+      "streak": 0,
+      "detail": {
+        "date": "2026-08-29",
+        "title": "Long Aerobic Run",
+        "moves": [
+          {
+            "name": "Running",
+            "id": 993286,
+            "reps": 0,
+            "weight": 0,
+            "time": 2700
+          }
+        ]
+      },
+      "c": 2
+    },
+    {
+      "n": "FTX Hybrid Athletics",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Becky Hennesy",
+      "n": "Andrew Pour",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Diana Zendejas",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Logan Rogers",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Aidee Geist",
+      "n": "Francheska Duffey",
       "w": 0,
       "h": "—",
       "streak": 0
     }
   ],
   "zerosNamed": [
-    "Justin Jircik",
-    "Becky Hennesy",
-    "Diana Zendejas",
-    "Logan Rogers",
-    "Aidee Geist"
+    "FTX Hybrid Athletics",
+    "Andrew Pour",
+    "Francheska Duffey"
   ]
 }
