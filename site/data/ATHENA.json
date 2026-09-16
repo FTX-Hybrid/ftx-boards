@@ -9,8 +9,18 @@
     {"n": "Martha Samaniego", "w": 23, "h": "20h"},
     {"n": "Danielle Rueter", "w": 17, "h": "17h"},
     {"n": "Shonna Andersen", "w": 10, "h": "9h", "c": 10,
-      "detail": {"title": "Strength & Power — Barbell Back Squat (logged)",
-        "sets": ["Set 1 — 8 reps · 95 lb", "Set 2 — 8 reps · 105 lb", "Set 3 — 8 reps · 105 lb", "Set 4 — 8 reps · 105 lb"]}},
+      "detail": {"title": "Assessment Day 2: Strength + 1RM", "date": "2026-08-25",
+        "moves": [
+          {"name": "Barbell Back Squat", "reps": 23, "weight": 2335},
+          {"name": "Deadlift", "reps": 25, "weight": 2375},
+          {"name": "Military Press", "reps": 26, "weight": 855},
+          {"name": "Pull-Up", "reps": 15, "weight": 0},
+          {"name": "Bird Dog", "reps": 30, "weight": 0}
+        ]},
+      "prs": [
+        {"name": "Deadlift", "reps": 25, "weight": 2375, "date": "2026-08-25"},
+        {"name": "Barbell Back Squat", "reps": 23, "weight": 2335, "date": "2026-08-25"}
+      ]},
     {"n": "Eva Martinez", "w": 2, "h": "2h"},
     {"n": "Francheska Duffey", "w": 0, "h": "—"}
   ],
