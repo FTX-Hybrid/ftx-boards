@@ -1,4 +1,4 @@
-name: Nightly FTX board refresh
+name: Nightly FTX data refresh
 
 on:
   schedule:
@@ -6,13 +6,7 @@ on:
   workflow_dispatch: {}      # lets you run it manually from the Actions tab
 
 permissions:
-  contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: false
+  contents: write            # only needs to commit refreshed data; deploy.yml handles Pages
 
 jobs:
   refresh:
@@ -42,11 +36,4 @@ jobs:
           git add site/data/*.json
           git commit -m "nightly data refresh" || echo "no changes"
           git push || echo "nothing to push"
-
-      - name: Upload site to Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      # No Pages deploy here — the push above triggers deploy.yml, which publishes site/.
