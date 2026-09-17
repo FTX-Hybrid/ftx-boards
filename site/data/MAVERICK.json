@@ -1,8 +1,8 @@
 {
   "group": "MAVERICK",
-  "updated": "2026-09-16",
+  "updated": "2026-09-17",
   "window": "since Jan 1, 2026",
-  "total": 5,
+  "total": 6,
   "members": [
     {
       "n": "Jake Hart",
@@ -480,6 +480,12 @@
       "c": 42
     },
     {
+      "n": "Zack Cain",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
       "n": "Jeff Ball",
       "w": 0,
       "h": "—",
@@ -499,6 +505,7 @@
     }
   ],
   "zerosNamed": [
+    "Zack Cain",
     "Jeff Ball",
     "Ricky Osterloh",
     "Clayton Marshall"
