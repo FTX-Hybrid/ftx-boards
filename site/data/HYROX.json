@@ -1,6 +1,6 @@
 {
   "group": "HYROX",
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "window": "since Jan 1, 2026",
   "total": 53,
   "members": [
@@ -702,7 +702,7 @@
           "date": "2026-04-04"
         }
       ],
-      "c": 153
+      "c": 155
     },
     {
       "n": "Jerrett Shannon",
@@ -955,14 +955,14 @@
       "w": 7,
       "h": "—",
       "streak": 0,
-      "c": 137
+      "c": 138
     },
     {
       "n": "Tracie Akerhielm",
       "w": 7,
       "h": "—",
       "streak": 0,
-      "c": 224
+      "c": 226
     },
     {
       "n": "Sandy Luna",
@@ -1661,7 +1661,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 139
+      "c": 140
     },
     {
       "n": "Holden Foster",
@@ -1772,7 +1772,7 @@
           "date": "2026-02-26"
         }
       ],
-      "c": 117
+      "c": 118
     },
     {
       "n": "Clayton Marshall",
@@ -2288,7 +2288,7 @@
           ]
         }
       ],
-      "c": 43
+      "c": 44
     },
     {
       "n": "Derek Uebel",
