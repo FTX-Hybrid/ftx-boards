@@ -1,8 +1,8 @@
 {
   "group": "HYROXONLINE",
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "window": "since Jan 1, 2026",
-  "total": 11,
+  "total": 12,
   "members": [
     {
       "n": "Talon Smith",
@@ -327,7 +327,7 @@
       "w": 7,
       "h": "—",
       "streak": 0,
-      "c": 226
+      "c": 227
     },
     {
       "n": "Clayton Marshall",
@@ -363,6 +363,13 @@
         }
       ],
       "c": 10
+    },
+    {
+      "n": "Kyle Spencer",
+      "w": 0,
+      "h": "—",
+      "streak": 0,
+      "c": 31
     },
     {
       "n": "Chad Bradford",
@@ -416,13 +423,13 @@
     }
   ],
   "zerosNamed": [
+    "Kyle Spencer",
     "Chad Bradford",
     "Lindsey Carnett",
     "Austin Parthie",
     "Andrew Pour",
     "Logan",
     "John Radzwilla",
-    "Zack Cain",
-    "Max Camp"
+    "Zack Cain"
   ]
 }

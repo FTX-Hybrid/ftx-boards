@@ -1,6 +1,6 @@
 {
   "group": "MAVERICK",
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "window": "since Jan 1, 2026",
   "total": 6,
   "members": [
@@ -394,7 +394,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 477
+      "c": 481
     },
     {
       "n": "Talon Smith",
@@ -483,7 +483,8 @@
       "n": "Jeff Ball",
       "w": 0,
       "h": "—",
-      "streak": 0
+      "streak": 0,
+      "c": 1
     },
     {
       "n": "Zack Cain",

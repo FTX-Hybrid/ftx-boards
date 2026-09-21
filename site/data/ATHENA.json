@@ -1,6 +1,6 @@
 {
   "group": "ATHENA",
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "window": "since Jan 1, 2026",
   "total": 10,
   "members": [
@@ -269,7 +269,7 @@
           ]
         }
       ],
-      "c": 44
+      "c": 45
     },
     {
       "n": "Talon Smith",
@@ -392,7 +392,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 28
+      "c": 30
     },
     {
       "n": "Eva Martinez",

@@ -1,6 +1,6 @@
 {
   "group": "HYROX",
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "window": "since Jan 1, 2026",
   "total": 53,
   "members": [
@@ -955,14 +955,14 @@
       "w": 7,
       "h": "—",
       "streak": 0,
-      "c": 138
+      "c": 139
     },
     {
       "n": "Tracie Akerhielm",
       "w": 7,
       "h": "—",
       "streak": 0,
-      "c": 226
+      "c": 227
     },
     {
       "n": "Sandy Luna",
@@ -2288,7 +2288,7 @@
           ]
         }
       ],
-      "c": 44
+      "c": 45
     },
     {
       "n": "Derek Uebel",
@@ -2540,6 +2540,13 @@
       "c": 1
     },
     {
+      "n": "Kyle Spencer",
+      "w": 0,
+      "h": "—",
+      "streak": 0,
+      "c": 31
+    },
+    {
       "n": "Zack Cain",
       "w": 0,
       "h": "—",
@@ -2556,13 +2563,6 @@
       "w": 0,
       "h": "—",
       "streak": 0
-    },
-    {
-      "n": "Kyle Spencer",
-      "w": 0,
-      "h": "—",
-      "streak": 0,
-      "c": 30
     },
     {
       "n": "Taylor Andrews",
@@ -2766,10 +2766,10 @@
     }
   ],
   "zerosNamed": [
+    "Kyle Spencer",
     "Zack Cain",
     "Erika Ramon",
     "Jaime Smith",
-    "Kyle Spencer",
     "Taylor Andrews",
     "Mirella Garcia",
     "Colin Hayek",
