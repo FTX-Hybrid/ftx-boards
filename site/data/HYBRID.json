@@ -1,6 +1,6 @@
 {
   "group": "HYBRID",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "window": "since Jan 1, 2026",
   "total": 48,
   "members": [
@@ -955,7 +955,7 @@
       "w": 7,
       "h": "—",
       "streak": 0,
-      "c": 139
+      "c": 141
     },
     {
       "n": "Sandy Luna",
@@ -1654,7 +1654,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 140
+      "c": 142
     },
     {
       "n": "Holden Foster",
@@ -2127,7 +2127,7 @@
           ]
         }
       ],
-      "c": 45
+      "c": 46
     },
     {
       "n": "Derek Uebel",

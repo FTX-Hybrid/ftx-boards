@@ -1,6 +1,6 @@
 {
   "group": "MAVERICK",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "window": "since Jan 1, 2026",
   "total": 6,
   "members": [
@@ -394,7 +394,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 481
+      "c": 485
     },
     {
       "n": "Talon Smith",
@@ -490,7 +490,8 @@
       "n": "Zack Cain",
       "w": 0,
       "h": "—",
-      "streak": 0
+      "streak": 0,
+      "c": 2
     },
     {
       "n": "Ricky Osterloh",

@@ -1,6 +1,6 @@
 {
   "group": "HYROXONLINE",
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "window": "since Jan 1, 2026",
   "total": 12,
   "members": [
@@ -369,14 +369,14 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 31
+      "c": 32
     },
     {
       "n": "Chad Bradford",
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 11
+      "c": 12
     },
     {
       "n": "Lindsey Carnett",
@@ -412,7 +412,8 @@
       "n": "Zack Cain",
       "w": 0,
       "h": "—",
-      "streak": 0
+      "streak": 0,
+      "c": 2
     },
     {
       "n": "Max Camp",
