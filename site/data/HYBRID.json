@@ -1,8 +1,8 @@
 {
   "group": "HYBRID",
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "window": "since Jan 1, 2026",
-  "total": 48,
+  "total": 49,
   "members": [
     {
       "n": "Alejandro Jones",
@@ -2127,7 +2127,7 @@
           ]
         }
       ],
-      "c": 46
+      "c": 49
     },
     {
       "n": "Derek Uebel",
@@ -2450,6 +2450,12 @@
       "c": 1
     },
     {
+      "n": "Tyler Hargrave",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
       "n": "Jaime Smith",
       "w": 0,
       "h": "—",
@@ -2658,13 +2664,13 @@
     }
   ],
   "zerosNamed": [
+    "Tyler Hargrave",
     "Jaime Smith",
     "Erika Ramon",
     "Taylor Andrews",
     "Mirella Garcia",
     "Jeffrey Bennett",
     "Lindsay Abstein",
-    "Gian Doloroso",
-    "Zack Cain"
+    "Gian Doloroso"
   ]
 }
