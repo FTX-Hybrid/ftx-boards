@@ -1,6 +1,6 @@
 {
   "group": "MAVERICK",
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "window": "since Jan 1, 2026",
   "total": 6,
   "members": [
@@ -484,14 +484,14 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 1
+      "c": 4
     },
     {
       "n": "Zack Cain",
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 3
+      "c": 25
     },
     {
       "n": "Ricky Osterloh",

@@ -1,8 +1,8 @@
 {
   "group": "HYROXONLINE",
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "window": "since Jan 1, 2026",
-  "total": 12,
+  "total": 14,
   "members": [
     {
       "n": "Talon Smith",
@@ -372,6 +372,19 @@
       "c": 33
     },
     {
+      "n": "Jade Dupra",
+      "w": 0,
+      "h": "—",
+      "streak": 0,
+      "c": 1
+    },
+    {
+      "n": "Dee Dupra",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
       "n": "Chad Bradford",
       "w": 0,
       "h": "—",
@@ -413,7 +426,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 3
+      "c": 25
     },
     {
       "n": "Max Camp",
@@ -425,12 +438,12 @@
   ],
   "zerosNamed": [
     "Kyle Spencer",
+    "Jade Dupra",
+    "Dee Dupra",
     "Chad Bradford",
     "Lindsey Carnett",
     "Austin Parthie",
     "Andrew Pour",
-    "Logan",
-    "John Radzwilla",
-    "Zack Cain"
+    "Logan"
   ]
 }
