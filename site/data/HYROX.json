@@ -1,6 +1,6 @@
 {
   "group": "HYROX",
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "window": "since Jan 1, 2026",
   "total": 54,
   "members": [
@@ -2288,7 +2288,7 @@
           ]
         }
       ],
-      "c": 49
+      "c": 50
     },
     {
       "n": "Derek Uebel",
@@ -2550,7 +2550,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 33
+      "c": 34
     },
     {
       "n": "Zack Cain",
