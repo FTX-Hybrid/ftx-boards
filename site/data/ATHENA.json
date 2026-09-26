@@ -1,6 +1,6 @@
 {
   "group": "ATHENA",
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "window": "since Jan 1, 2026",
   "total": 10,
   "members": [
@@ -392,7 +392,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 34
+      "c": 35
     },
     {
       "n": "Eva Martinez",
