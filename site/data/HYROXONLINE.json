@@ -1,8 +1,8 @@
 {
   "group": "HYROXONLINE",
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "window": "since Jan 1, 2026",
-  "total": 15,
+  "total": 16,
   "members": [
     {
       "n": "Talon Smith",
@@ -365,6 +365,12 @@
       "c": 10
     },
     {
+      "n": "Leslie Guthrie",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
       "n": "Chris Behan",
       "w": 0,
       "h": "—",
@@ -432,7 +438,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 32
+      "c": 34
     },
     {
       "n": "Max Camp",
@@ -443,13 +449,13 @@
     }
   ],
   "zerosNamed": [
+    "Leslie Guthrie",
     "Chris Behan",
     "Kyle Spencer",
     "Jade Dupra",
     "Dee Dupra",
     "Chad Bradford",
     "Lindsey Parthie",
-    "Austin Parthie",
-    "Andrew Pour"
+    "Austin Parthie"
   ]
 }
