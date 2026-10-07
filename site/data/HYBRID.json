@@ -1,6 +1,6 @@
 {
   "group": "HYBRID",
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "window": "since Jan 1, 2026",
   "total": 49,
   "members": [
@@ -1654,7 +1654,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 144
+      "c": 145
     },
     {
       "n": "Holden Foster",
@@ -2127,7 +2127,7 @@
           ]
         }
       ],
-      "c": 55
+      "c": 57
     },
     {
       "n": "Derek Uebel",
