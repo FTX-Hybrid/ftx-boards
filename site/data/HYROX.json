@@ -1,8 +1,8 @@
 {
   "group": "HYROX",
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "window": "since Jan 1, 2026",
-  "total": 53,
+  "total": 52,
   "members": [
     {
       "n": "Alejandro Jones",
@@ -1661,7 +1661,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 145
+      "c": 148
     },
     {
       "n": "Holden Foster",
@@ -2710,12 +2710,6 @@
     },
     {
       "n": "Mary Kate Beseau",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Jerelyn Ontiveros",
       "w": 0,
       "h": "—",
       "streak": 0
