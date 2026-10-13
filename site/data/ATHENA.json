@@ -1,6 +1,6 @@
 {
   "group": "ATHENA",
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "window": "since Jan 1, 2026",
   "total": 10,
   "members": [
@@ -166,7 +166,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 148
+      "c": 149
     },
     {
       "n": "Jennifer Ward",
@@ -378,7 +378,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 25
+      "c": 26
     },
     {
       "n": "Shonna Andersen",
@@ -392,7 +392,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 50
+      "c": 51
     },
     {
       "n": "Eva Martinez",
