@@ -1,6 +1,6 @@
 {
   "group": "HYROX",
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "window": "since Jan 1, 2026",
   "total": 52,
   "members": [
@@ -1661,7 +1661,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 149
+      "c": 154
     },
     {
       "n": "Holden Foster",
@@ -2550,7 +2550,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 54
+      "c": 55
     },
     {
       "n": "Zack Cain",
