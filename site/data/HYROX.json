@@ -1,8 +1,8 @@
 {
   "group": "HYROX",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "window": "since Jan 1, 2026",
-  "total": 52,
+  "total": 51,
   "members": [
     {
       "n": "Alejandro Jones",
@@ -949,13 +949,6 @@
         }
       ],
       "c": 206
-    },
-    {
-      "n": "Lillie Johnston",
-      "w": 7,
-      "h": "—",
-      "streak": 0,
-      "c": 141
     },
     {
       "n": "Tracie Akerhielm",
@@ -2288,7 +2281,7 @@
           ]
         }
       ],
-      "c": 61
+      "c": 62
     },
     {
       "n": "Derek Uebel",
@@ -2540,6 +2533,18 @@
       "c": 1
     },
     {
+      "n": "Elise Bixenstine",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
+      "n": "Gabrielle Durand",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
       "n": "Tyler Hargrave",
       "w": 0,
       "h": "—",
@@ -2683,12 +2688,6 @@
       "c": 2
     },
     {
-      "n": "Ivette Olivas",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
       "n": "Justin Rothrock",
       "w": 0,
       "h": "—",
@@ -2704,12 +2703,6 @@
     },
     {
       "n": "Alison (Ali) Marwan",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Mary Kate Beseau",
       "w": 0,
       "h": "—",
       "streak": 0
@@ -2760,13 +2753,13 @@
     }
   ],
   "zerosNamed": [
+    "Elise Bixenstine",
+    "Gabrielle Durand",
     "Tyler Hargrave",
     "Kyle Spencer",
     "Zack Cain",
     "Jaime Smith",
     "Taylor Andrews",
-    "Mirella Garcia",
-    "Colin Hayek",
-    "Jennifer Smith"
+    "Mirella Garcia"
   ]
 }

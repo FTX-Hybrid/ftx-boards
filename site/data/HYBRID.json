@@ -1,8 +1,8 @@
 {
   "group": "HYBRID",
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "window": "since Jan 1, 2026",
-  "total": 49,
+  "total": 47,
   "members": [
     {
       "n": "Alejandro Jones",
@@ -949,13 +949,6 @@
         }
       ],
       "c": 206
-    },
-    {
-      "n": "Lillie Johnston",
-      "w": 7,
-      "h": "—",
-      "streak": 0,
-      "c": 141
     },
     {
       "n": "Sandy Luna",
@@ -2127,7 +2120,7 @@
           ]
         }
       ],
-      "c": 61
+      "c": 62
     },
     {
       "n": "Derek Uebel",
@@ -2450,6 +2443,18 @@
       "c": 1
     },
     {
+      "n": "Elise Bixenstine",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
+      "n": "Gabrielle Durand",
+      "w": 0,
+      "h": "—",
+      "streak": 0
+    },
+    {
       "n": "Tyler Hargrave",
       "w": 0,
       "h": "—",
@@ -2478,13 +2483,6 @@
       "w": 0,
       "h": "—",
       "streak": 0
-    },
-    {
-      "n": "Jeffrey Bennett",
-      "w": 0,
-      "h": "—",
-      "streak": 0,
-      "c": 1
     },
     {
       "n": "Lindsay Abstein",
@@ -2574,12 +2572,6 @@
       "streak": 0
     },
     {
-      "n": "Ivette Olivas",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
       "n": "Justin Rothrock",
       "w": 0,
       "h": "—",
@@ -2595,12 +2587,6 @@
     },
     {
       "n": "Alison (Ali) Marwan",
-      "w": 0,
-      "h": "—",
-      "streak": 0
-    },
-    {
-      "n": "Mary Kate Beseau",
       "w": 0,
       "h": "—",
       "streak": 0
@@ -2664,13 +2650,13 @@
     }
   ],
   "zerosNamed": [
+    "Elise Bixenstine",
+    "Gabrielle Durand",
     "Tyler Hargrave",
     "Jaime Smith",
     "Erika Ramon",
     "Taylor Andrews",
     "Mirella Garcia",
-    "Jeffrey Bennett",
-    "Lindsay Abstein",
-    "Gian Doloroso"
+    "Lindsay Abstein"
   ]
 }
