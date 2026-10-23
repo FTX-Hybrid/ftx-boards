@@ -1,6 +1,6 @@
 {
   "group": "HYROX",
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "window": "since Jan 1, 2026",
   "total": 51,
   "members": [
@@ -1654,7 +1654,7 @@
           "date": "2026-04-06"
         }
       ],
-      "c": 154
+      "c": 155
     },
     {
       "n": "Holden Foster",
@@ -2281,7 +2281,7 @@
           ]
         }
       ],
-      "c": 62
+      "c": 64
     },
     {
       "n": "Derek Uebel",
@@ -2533,13 +2533,13 @@
       "c": 1
     },
     {
-      "n": "Elise Bixenstine",
+      "n": "Gabrielle Durand",
       "w": 0,
       "h": "—",
       "streak": 0
     },
     {
-      "n": "Gabrielle Durand",
+      "n": "Elise Bixenstine",
       "w": 0,
       "h": "—",
       "streak": 0
@@ -2570,7 +2570,7 @@
       "streak": 0
     },
     {
-      "n": "Taylor Andrews",
+      "n": "Staff Demo",
       "w": 0,
       "h": "—",
       "streak": 0
@@ -2591,7 +2591,8 @@
       "n": "Jennifer Smith",
       "w": 0,
       "h": "—",
-      "streak": 0
+      "streak": 0,
+      "c": 1
     },
     {
       "n": "Linda Patton",
@@ -2620,7 +2621,7 @@
       "streak": 0
     },
     {
-      "n": "Tracey Andrews",
+      "n": "Demo Account",
       "w": 0,
       "h": "—",
       "streak": 0,
@@ -2718,7 +2719,7 @@
       "w": 0,
       "h": "—",
       "streak": 0,
-      "c": 9
+      "c": 10
     },
     {
       "n": "Irene Garcia",
@@ -2753,13 +2754,13 @@
     }
   ],
   "zerosNamed": [
-    "Elise Bixenstine",
     "Gabrielle Durand",
+    "Elise Bixenstine",
     "Tyler Hargrave",
     "Kyle Spencer",
     "Zack Cain",
     "Jaime Smith",
-    "Taylor Andrews",
+    "Staff Demo",
     "Mirella Garcia"
   ]
 }
