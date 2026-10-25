@@ -1,8 +1,25 @@
 {
   "group": "MAVERICK",
-  "updated": "2026-09-16",
-  "window": "last 30 days",
-  "total": 0,
-  "members": [],
-  "zerosNamed": []
+  "updated": "2026-10-25",
+  "total": 6,
+  "members": [
+    {
+      "n": "Clayton Marshall"
+    },
+    {
+      "n": "Jake Hart"
+    },
+    {
+      "n": "Jeff Ball"
+    },
+    {
+      "n": "Ricky Osterloh"
+    },
+    {
+      "n": "Talon Smith"
+    },
+    {
+      "n": "Zack Cain"
+    }
+  ]
 }
